@@ -1,0 +1,38 @@
+/* Layout: App-header */
+
+#app-header {
+  padding: 30px 20px;
+  background-color: rgba(0,0,0,.2);
+
+  h1 {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: .5;
+  }
+
+  .main-nav {
+    display: inline-block;
+
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      > li {
+        display: inline-block;
+
+        > a {
+          padding: 10px;
+          text-decoration:none;
+
+          &:hover {text-decoration: underline;}
+        }
+      }
+    }
+  }
+}

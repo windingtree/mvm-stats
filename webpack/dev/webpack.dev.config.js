@@ -1,0 +1,61 @@
+const webpack = require('webpack');
+const path = require('path');
+
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CreateFilePlugin = require('webpack-create-file-plugin');
+
+const parentDir = path.join(__dirname, '../../');
+const APP_DIR = path.resolve(parentDir, 'src');
+const BUILD_DIR = path.resolve(parentDir, 'public');
+
+console.log('Starting App ... \n================\n');
+
+module.exports = {
+  entry: [
+    APP_DIR + '/index.js'
+  ],
+  module: {
+    loaders: [{
+      test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },{
+        test: /\.css$/,
+        // loaders: ['style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: './webpack/dev/'
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  output: {
+    path: path.join(BUILD_DIR, '/'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: path.join(BUILD_DIR, '/'),
+    historyApiFallback: true
+  },
+  plugins: [
+    // Copy files from /src to /public
+    new CopyWebpackPlugin([
+      { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' }
+    ]),
+    // Create blank files to avoid errors in the browser console
+    new CreateFilePlugin({
+      files: [
+        'app.css',
+        'bundle.js'
+      ]
+    })
+  ]
+}

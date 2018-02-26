@@ -1,0 +1,112 @@
+/* ALERT */
+
+/*
+@styleguide
+@title Alert messages
+
+Alert messages can have different colors accordingly with the message they are comunicating.
+    <div class="row no-gutters">
+      <div class="col">
+        <div class="sample app--night">
+          <div class="alert alert-success alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
+            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
+            <strong>
+              <i class="material-icons">info</i>
+            </strong> Sample message
+          </div>
+        </div>
+        <div class="sample app--night">
+          <div class="alert alert-warning alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
+            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
+            <strong>
+              <i class="material-icons">info</i>
+            </strong> Sample message
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="sample app--night">
+          <div class="alert alert-danger alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
+            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
+            <strong>
+              <i class="material-icons">info</i>
+            </strong> Sample message
+          </div>
+        </div>
+        <div class="sample app--night">
+          <div class="alert alert-info alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
+            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
+            <strong>
+              <i class="material-icons">info</i>
+            </strong> Sample message
+          </div>
+        </div>
+      </div>
+    </div>
+
+    // Use the following syntax to call an alert message withing a view: _showAlert(type, message)
+    _showAlert('success', 'This is a success message')
+
+    // Withing the Layout.js use _alert.open(type, message)
+    _alert.open('success', 'This is a success message')
+
+*/
+
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000000000000;
+  max-width: 370px;
+  padding:  20px 47px 20px 50px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  border-radius: 4px !important;
+  box-shadow:  3px 3px 8px rgba(0,0,0,.2);
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+    top: 0; left: 0; right: 0;
+    max-width: none;
+    border-radius: 0 !important;
+  }
+
+ .close {
+   top: 7px;
+   font-size: 21px;
+   font-weight: bold;
+  }
+
+ .material-icons {
+    position: absolute;
+    top: 23px;
+    left: 22px;
+    font-size: 18px;
+    opacity: 0.7;
+  }
+
+  &.alert-danger {
+    color: #fff;
+    border: #ef3f20;
+    background: #ef3f20;
+  }
+
+  &.alert-warning {
+    color: #fff;
+    border: #FD8938;
+    background: #FD8938;
+  }
+
+  &.alert-success {
+    color: #fff;
+    border: #51b651;
+    background: #51b651;
+  }
+
+  &.alert-info {
+    color: #fff;
+    border: #0FA2F0;
+    background: #0FA2F0;
+  }
+
+}
