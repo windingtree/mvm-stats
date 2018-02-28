@@ -5,8 +5,8 @@
 ### Set up ###
 
 * Clone the repo.
-* Create an empty folder /public or run `npm run build`.
 * Run `npm install` to get the required dependencies.
+* Create an empty folder /public or run `npm run build`.
 * Run `npm start` to run the webapp in development mode or `npm run dev` if don't want the hot reload enabled.
 * Run `npm run build` to "compile" the app. Put the necesary files in the public folder (minified and optimized), and create a style guide in /styleguide.
 
