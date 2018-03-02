@@ -1,0 +1,7 @@
+/* Layout: App-footer */
+
+#app-footer {
+  padding: 40px 30px;
+  border-top: 1px solid var(--colorLight);
+  background: var(--colorBG);
+}

@@ -1,0 +1,125 @@
+/* BUTTONS */
+
+/*
+@styleguide
+@title Buttons
+
+We are using Bootstrap style buttons.
+Check the documentation below.
+
+- https://getbootstrap.com/docs/4.0/components/buttons/
+*/
+
+
+.btn {
+  border-right: 2px;
+
+  &.btn-xl {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  .material-icons {color: inherit; font-size: inherit;}
+}
+
+.btn-primary {
+  border-color: var(--colorPrimary);
+  background-color: var(--colorPrimary);
+  &:hover {
+    background-color: color(var(--colorPrimary) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorPrimary) shade: 25%);}
+
+ }
+.btn-accent {
+  color: var(--colorWhite);
+  border-color: var(--colorAccent);
+  background-color: var(--colorAccent);
+  &:hover {
+    background-color: color(var(--colorAccent) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorAccent) shade(25%));}
+
+ }
+.btn-secondary {
+  border-color: var(--colorSecondary);
+  background-color: var(--colorSecondary);
+  &:hover {
+    background-color: color(var(--colorSecondary) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorSecondary) shade(25%));}
+
+ }
+.btn-success {
+  border-color: var(--colorSuccess);
+  background-color: var(--colorSuccess);
+  &:hover {
+    background-color: color(var(--colorSuccess) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorSuccess) shade(25%));}
+
+ }
+.btn-danger {
+  border-color: var(--colorDanger);
+  background-color: var(--colorDanger);
+  &:hover {
+    background-color: color(var(--colorDanger) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorDanger) shade(25%));}
+
+ }
+.btn-warning {
+  border-color: var(--colorWarning);
+  background-color: var(--colorWarning);
+  &:hover {
+    background-color: color(var(--colorWarning) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorWarning) shade(25%));}
+
+ }
+.btn-info {
+  border-color: var(--colorInfo);
+  background-color: var(--colorInfo);
+  &:hover {
+    background-color: color(var(--colorInfo) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorInfo) shade(25%));}
+
+ }
+.btn-light {
+  border-color: var(--colorLight);
+  background-color: var(--colorLight);
+  &:hover {
+    background-color: color(var(--colorLight) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorLight) shade(25%));}
+
+ }
+.btn-dark {
+  color: var(--colorWhite);
+  border-color: var(--colorDark);
+  background-color: var(--colorDark);
+  &:hover {
+    background-color: color(var(--colorDark) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorDark) shade(25%));}
+
+ }
+.btn-muted {
+  border-color: var(--colorMuted);
+  background-color: var(--colorMuted);
+  &:hover {
+    background-color: color(var(--colorMuted) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorMuted) shade(25%));}
+
+ }
+.btn-white {
+  border-color: var(--colorWhite);
+  background-color: var(--colorWhite);
+  &:hover {
+    background-color: color(var(--colorWhite) shade(15%));
+  }
+  &:not(:disabled):not(.disabled):active {background-color: color(var(--colorWhite) shade(25%));}
+
+ }

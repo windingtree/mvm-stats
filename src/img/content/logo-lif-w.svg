@@ -1,0 +1,21 @@
+<svg width="132" height="132" xmlns="http://www.w3.org/2000/svg">
+ <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+ <title>Artboard</title>
+ <desc>Created with Sketch.</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g fill-rule="evenodd" fill="none" id="Page-1">
+   <g fill-rule="nonzero" id="Artboard">
+    <g id="Group">
+     <path fill="#ffffff" id="Shape" d="m85.786723,6.857143c-21.63381,0 -39.21127,17.57388 -39.21127,39.20327l0,39.54122l39.5493,0c21.6338,0 39.21126,-17.57388 39.21126,-39.20327l0,-39.54122l-39.54929,0z"/>
+     <path fill="#ffffff" id="Shape" d="m115.533203,105.372243l-9.97183,0l-78.92958,0l0,-78.91347l0,-9.80081c0,-5.40735 -4.39437,-9.80082 -9.80282,-9.80082l-9.97183,0l0,9.80082l0,88.71428l0,19.77061l19.77465,0l88.73239,0l9.97183,0l0,-9.96979c0,-5.40735 -4.39436,-9.80082 -9.80281,-9.80082z"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

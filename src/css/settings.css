@@ -1,1 +1,29 @@
 /* Settings */
+
+:root {
+  --fontPrimary: 'Catamaran', sans-serif;
+
+  /* colors */
+  --colorPrimary: #129697;
+  --colorAccent: #48ddca;
+  --colorSecondary: #5F6A6F;
+  --colorSuccess: #55c46e;
+  --colorDanger: #F54D6F;
+  --colorWarning: #FACE5D;
+  --colorInfo: #0aa8ca;
+  --colorLight: #CBCCCC;
+  --colorDark: #0d989d;
+  --colorMuted: #878f97;
+  --colorWhite: #fff;
+
+  --colorLink: #0074A0;
+  --colorBG: #F9F9F9;
+
+  /* specific colors */
+  --shadowColor: rgba(0,0,0,.13);
+  --shadowColorSubtle: rgba(0,0,0,.07);
+
+  /* shadows */
+  --shadow: 10px 10px 90px var(--shadowColor), 1px 5px 30px var(--shadowColorSubtle);
+  --shadowSubtle: 5px 5px 20px var(--shadowColorSubtle);
+}

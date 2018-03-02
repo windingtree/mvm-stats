@@ -7,7 +7,7 @@ module.exports = ({
       warnForDuplicates: false
     },
     'postcss-style-guide': {
-      project: 'Style Guide',
+      project: 'MVM Style Guide',
       dest: 'public/styleguide/index.html',
       showCode: true,
       // themePath: '../'

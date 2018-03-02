@@ -12,8 +12,10 @@
   "author": "Nico Calabrese",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^1.1.1",
     "imagemin-webpack-plugin": "^2.0.0",
     "react": "^16.2.0",
+    "react-chartjs": "^1.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "webpack-dev-server": "^2.11.1"

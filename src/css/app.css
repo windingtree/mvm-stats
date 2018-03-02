@@ -1,3 +1,18 @@
+/*
+@styleguide
+@title App Layout
+
+The basic app layout consists in a wrapper, header, content, and footer.
+
+    <div class="app">
+      <div class="app-header"><div>
+      <div class="app-content">
+        <div class="app-hero"><div>
+      <div>
+      <div class="app-footer"><div>
+    <div>
+*/
+
 @import 'settings.css';
 @import 'animation.css';
 @import 'base.css';
@@ -6,15 +21,3 @@
 @import 'helpers.css';
 @import 'shame.css';
 @import 'styleguide.css';
-
-/*
-@styleguide
-@title App
-    <div class="col">
-      <div class="sample">
-        <h2 class="mb-0">App</h2>
-      </div>
-    </div>
-
-    <div class="app"> App <div>
-*/

@@ -1,3 +1,8 @@
 /* Components */
 
 @import "components/alert.css";
+@import "components/icons.css";
+@import "components/buttons.css";
+@import "components/chart-wrapper.css";
+@import "components/brand-wrapper.css";
+@import "components/card.css";

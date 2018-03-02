@@ -5,49 +5,13 @@
 @title Alert messages
 
 Alert messages can have different colors accordingly with the message they are comunicating.
-    <div class="row no-gutters">
-      <div class="col">
-        <div class="sample app--night">
-          <div class="alert alert-success alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
-            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
-            <strong>
-              <i class="material-icons">info</i>
-            </strong> Sample message
-          </div>
-        </div>
-        <div class="sample app--night">
-          <div class="alert alert-warning alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
-            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
-            <strong>
-              <i class="material-icons">info</i>
-            </strong> Sample message
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="sample app--night">
-          <div class="alert alert-danger alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
-            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
-            <strong>
-              <i class="material-icons">info</i>
-            </strong> Sample message
-          </div>
-        </div>
-        <div class="sample app--night">
-          <div class="alert alert-info alert-dismissible" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; ">
-            <button type="button" class="close" style="top: 11px; right: 3px;">×</button>
-            <strong>
-              <i class="material-icons">info</i>
-            </strong> Sample message
-          </div>
-        </div>
-      </div>
-    </div>
 
-    // Use the following syntax to call an alert message withing a view: _showAlert(type, message)
+Use the following syntax to call an alert message within a view: `_showAlert(type, message)`
+
     _showAlert('success', 'This is a success message')
 
-    // Withing the Layout.js use _alert.open(type, message)
+Withing the Layout.js use `_alert.open(type, message)`
+
     _alert.open('success', 'This is a success message')
 
 */

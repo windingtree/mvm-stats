@@ -13,3 +13,7 @@
 ### Dev Server ###
 
 After runing `npm start` or `npm run dev` → http://localhost:8080/
+
+#### Dependencies ####
+
+http://www.chartjs.org/

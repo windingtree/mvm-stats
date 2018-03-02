@@ -1,4 +1,7 @@
 /* Layout */
 
+@import "layout/app-grid";
 @import "layout/app-header";
 @import "layout/app-content";
+@import "layout/app-hero";
+@import "layout/app-footer";

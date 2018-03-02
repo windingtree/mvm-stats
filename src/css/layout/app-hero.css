@@ -1,0 +1,53 @@
+/* Layout: App-hero */
+
+#app-hero {
+  padding: 40px 20px 40px 20px;
+  margin: -30px -20px 45px -20px;
+
+  &.app-hero--pull-bottom {
+    padding: 40px 20px 80px 20px;
+    margin: -30px -20px -40px -20px;
+  }
+
+  &.app-hero--compact {
+    padding: 25px 20px;
+  }
+
+  text-align: center;
+  color: var(--colorWhite);
+  background: #48ddca;
+
+  h1 {
+    color: var(--colorWhite);
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    color: var(--colorWhite);
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  h6, .h6 {
+    color: var(--colorWhite);
+    font-size: 15px;
+    margin-bottom: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: 400px;
+    margin: 30px auto;
+
+    canvas {
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+/* ICONS */
+
+/*
+@styleguide
+@title Icons
+
+We are using font awesome and material icons (MI will be removed later).
+Check the documentation below.
+
+- https://fontawesome.com/icons/l
+- https://material.io/icons/
+
+##### Example of use
+
+Material Icons
+
+<i class="material-icons">whatshot</i>
+
+    <i class="material-icons">whatshot</i>
+
+Font Awesome Icons
+
+<i class="fas fa-fire"></i>
+
+    <i class="fas fa-fire"></i>
+
+*/
+
+
+.icon, .material-icons, .fas {
+  color: #007587;
+}
+
+.material-icons--xl {
+  font-size: 43px;
+}
+
+/* Improves the position of the icons inside the titles */
+.material-icons {
+  h2 &, h3 & {position: relative; top: 2px;}
+}
+.svg-inline--fa {
+  h2 &, h3 & {position: relative; top: -2px;}
+}

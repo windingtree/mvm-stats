@@ -1,5 +1,8 @@
 /* Layout: App-content */
 
 #app-content {
-  padding: 30px 20px;
+  padding: 30px 20px 60px 20px;
+
+  background: var(--colorBG);
+  background: linear-gradient( var(--colorWhite) 50%, var(--colorBG) 100% );
 }

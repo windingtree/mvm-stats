@@ -27,7 +27,7 @@ export default class MainNav extends Component {
       <nav className="main-nav">
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="guide-to-sell">Guide</Link></li>
+          <li><Link to="FAQ">FAQ</Link></li>
         </ul>
       </nav>
     );

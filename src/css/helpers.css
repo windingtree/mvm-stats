@@ -1,1 +1,44 @@
 /* Helpers */
+
+.text-primary { color: var(--colorPrimary) !important }
+.text-accent { color: var(--colorAccent) !important }
+.text-secondary { color: var(--colorSecondary) !important }
+.text-success { color: var(--colorSuccess) !important }
+.text-danger { color: var(--colorDanger) !important }
+.text-warning { color: var(--colorWarning) !important }
+.text-info { color: var(--colorInfo) !important }
+.text-light { color: var(--colorLight) !important }
+.text-dark { color: var(--colorDark) !important }
+.text-muted { color: var(--colorMuted) !important }
+.text-white { color: var(--colorWhite) !important }
+
+.bg-primary { background-color: var(--colorPrimary) !important }
+.bg-accent { background-color: var(--colorAccent) !important }
+.bg-secondary { background-color: var(--colorSecondary) !important }
+.bg-success { background-color: var(--colorSuccess) !important }
+.bg-danger { background-color: var(--colorDanger) !important }
+.bg-warning { background-color: var(--colorWarning) !important }
+.bg-info { background-color: var(--colorInfo) !important }
+.bg-light { background-color: var(--colorLight) !important }
+.bg-dark { background-color: var(--colorDark) !important }
+.bg-muted { background-color: var(--colorMuted) !important }
+.bg-white { background-color: var(--colorWhite) !important }
+
+.link-primary { color: var(--colorPrimary) !important }
+.link-accent { color: var(--colorAccent) !important }
+.link-secondary { color: var(--colorSecondary) !important }
+.link-success { color: var(--colorSuccess) !important }
+.link-danger { color: var(--colorDanger) !important }
+.link-warning { color: var(--colorWarning) !important }
+.link-info { color: var(--colorInfo) !important }
+.link-light { color: var(--colorLight) !important }
+.link-dark { color: var(--colorDark) !important }
+.link-muted { color: var(--colorMuted) !important }
+.link-white { color: var(--colorWhite) !important }
+
+.text--lg { font-size: 18px !important; }
+.text--xl {
+  font-size: 60px !important;
+  line-height: 75px !important;
+  strong {font-weight: 900 !important;}
+}

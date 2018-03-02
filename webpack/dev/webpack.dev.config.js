@@ -23,14 +23,13 @@ module.exports = {
         test: /\.css$/,
         // loaders: ['style-loader', 'css-loader', 'postcss-loader']
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader'},
+          {loader: 'style-loader', options: { sourceMap: true }},
+          {loader: 'css-loader', options: { sourceMap: true }},
           {
             loader: 'postcss-loader',
             options: {
-              config: {
-                path: './webpack/dev/'
-              }
+              config: { path: './webpack/dev/' },
+              sourceMap: true
             }
           }
         ]

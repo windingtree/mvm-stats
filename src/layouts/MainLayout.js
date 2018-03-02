@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import AppHeader from '../components/AppHeader';
+import AppFooter from '../components/AppFooter';
 import Alert from '../components/Alert';
 
 export default class MainLayout extends Component {
@@ -34,6 +35,7 @@ export default class MainLayout extends Component {
 
         <AppHeader id="app-header" />
         {this.props.children}
+        <AppFooter/>
 
       </div>
     );
