@@ -17,26 +17,18 @@ class Alert extends Component {
 
   open(type, message){
     let self = this;
+    if (self.state.open !== false) return;
+    if (type === 'none') return self.close();
 
-    if (self.state.open === false) {
-      if (type !== 'none') {
-        setTimeout(function(){
-
-          self.setState({
-            open: true,
-            type: type,
-            message: message
-          });
-
-          setTimeout(function(){
-            self.fadeOut();
-          }, (message.length < 50 ? 3500 : (message.length * 62) ));
-
-        }, 10);
-      } else {
-        self.close();
-      }
-    }
+    setTimeout(()=>{
+      self.setState({
+        open: true,
+        type: type,
+        message: message
+      });
+      setTimeout(()=> self.fadeOut(),
+      (message.length < 50 ? 3500 : (message.length * 62) ));
+    }, 10);
   }
 
   fadeOut() {
@@ -62,11 +54,13 @@ class Alert extends Component {
     if (self.state.open) {
 
       return (
-        <div className={`alert alert-${alertType} alert-dismissible ${hide ? 'animate-fadeOut' : 'animate-bounceInDown'}`}>
-          <button type="button" className="close" data-dismiss="alert" onClick={ ()=> self.fadeOut() }>×</button>
-          <strong>
-            <i className="material-icons">info</i>
-          </strong> {alertMessage}
+        <div className="alert-wrapper">
+          <div className={`alert alert-${alertType} alert-dismissible ${hide ? 'animate-fadeOut' : 'animate-bounceInDown'}`}>
+            <button type="button" className="close" data-dismiss="alert" onClick={ ()=> self.fadeOut() }>×</button>
+            <strong>
+              <i className="material-icons">info</i>
+            </strong> {alertMessage}
+          </div>
         </div>
       );
 

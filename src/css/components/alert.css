@@ -6,13 +6,13 @@
 
 Alert messages can have different colors accordingly with the message they are comunicating.
 
-Use the following syntax to call an alert message within a view: `_showAlert(type, message)`
+Use the following syntax to call an alert message from a view: `_showAlert(type, message)`
 
     _showAlert('success', 'This is a success message')
 
-Withing the Layout.js use `_alert.open(type, message)`
+In a Layout template (ie. MainLayout.js) use `_alert.open(type, message)`
 
-    _alert.open('success', 'This is a success message')
+    this._alert.open('success', 'This is a success message')
 
 */
 
