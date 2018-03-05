@@ -12,7 +12,10 @@
 
 ### Dev Server ###
 
-After runing `npm start` or `npm run dev` → http://localhost:8080/
+After runing `npm start` or `npm run dev`
+
+* Web/App: http://localhost:8080/
+* Style-guide: http://localhost:8080/styleguide
 
 #### Dependencies ####
 
