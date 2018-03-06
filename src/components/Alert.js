@@ -10,12 +10,9 @@ class Alert extends Component {
       message: '',
       hide: false
     };
-
-    this.open = this.open.bind(this);
-    this.close = this.close.bind(this);
   }
 
-  open(type, message){
+  open = (type, message) => {
     let self = this;
     if (self.state.open !== false) return;
     if (type === 'none') return self.close();
@@ -56,7 +53,7 @@ class Alert extends Component {
       return (
         <div className="alert-wrapper">
           <div className={`alert alert-${alertType} alert-dismissible ${hide ? 'animate-fadeOut' : 'animate-bounceInDown'}`}>
-            <button type="button" className="close" data-dismiss="alert" onClick={ ()=> self.fadeOut() }>×</button>
+            <button type="button" className="close" data-dismiss="alert" onClick={self.fadeOut}>×</button>
             <strong>
               <i className="material-icons">info</i>
             </strong> {alertMessage}
