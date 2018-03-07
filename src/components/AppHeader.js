@@ -14,19 +14,16 @@ export default class AppHeader extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
   }
 
   render() {
-    const self = this;
     const lifLogo = 'img/content/logo-lif-w.svg';
 
     return (
-      <header id={self.props.id}>
+      <header id={this.props.id}>
         <h1>
           <Link to="/" className="brand-wrapper">
             <img className="brand" src={lifLogo}/>
