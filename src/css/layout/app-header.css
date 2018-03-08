@@ -2,7 +2,12 @@
 
 #app-header {
   padding: 18px 30px;
-  background: #168996;
+  background: color(var(--colorDark) shade(12%) hue(184%) saturation(100%));
 
   > * {margin-bottom: 0;}
+
+
+  .app-layout--error & {
+    padding: 48px 30px 0;
+  }
 }

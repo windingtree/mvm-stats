@@ -5,4 +5,9 @@
 
   background: var(--colorBG);
   background: linear-gradient( var(--colorWhite) 50%, var(--colorBG) 100% );
+
+  .app-layout--error & {
+    color: var(--colorWhite);
+    background: color(var(--colorDark) shade(12%) hue(184%) saturation(100%))
+  }
 }
