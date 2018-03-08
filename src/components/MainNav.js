@@ -13,16 +13,12 @@ export default class MainNav extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
   }
 
   render() {
-    const self = this;
-
     return (
       <nav className="main-nav">
         <ul>

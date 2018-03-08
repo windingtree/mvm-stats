@@ -15,23 +15,22 @@ export default class MainLayout extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
   }
 
-  render() {
-    const self = this;
+  _callAlert = (c) => this._alert = c;
+  _showAlert = (type, message) => this._alert.open(type, message);
 
-    let childrenWithProps = React.cloneElement(self.props.children, {
-      _showAlert: (type, message) => self._alert.open(type, message)
+  render() {
+    let childrenWithProps = React.cloneElement(this.props.children, {
+      showAlert: this._showAlert
 		});
 
     return (
       <div id="app-layout" className="app-layout--main">
-        <Alert ref={ (c) => self._alert = c } />
+        <Alert ref={this._callAlert} />
 
         <AppHeader id="app-header" />
         {this.props.children}

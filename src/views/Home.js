@@ -10,9 +10,6 @@ export default class Home extends Component {
     super(props);
     this.state = {
       name: 'home',
-      headerH: 0,
-      viewportH: 0,
-      viewportW: 0,
       chartData: {
         labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         datasets: [{
@@ -44,36 +41,16 @@ export default class Home extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
     window.scrollTo(0, 0);
-
-    function setDimensions(){
-      self.setState({
-        headerH: document.getElementById('app-header').clientHeight,
-        viewportH: document.documentElement.clientHeight,
-        viewportW: document.documentElement.clientHeight
-      })
-    }
-
-    setTimeout(function(){ setDimensions() }, 5);
-    window.addEventListener("resize", () => {
-			setTimeout(() => { setDimensions() }, 10);
-		});
-
-  $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
   }
 
   render () {
-    const self = this;
-
-    let {
-      headerH, viewportH, viewportW,
-      chartData, chartOptions
-    } = this.state;
+    const {chartData, chartOptions} = this.state;
+    const {showAlert} = this.props;
 
     return (
       <div id="app-content">
