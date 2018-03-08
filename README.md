@@ -17,6 +17,10 @@ After runing `npm start` or `npm run dev`
 * Web/App: http://localhost:8080/
 * Style-guide: http://localhost:8080/styleguide
 
+#### Deploy to Github Pages
+
+`git subtree push --prefix public origin gh-pages`
+
 #### Dependencies ####
 
 http://www.chartjs.org/
