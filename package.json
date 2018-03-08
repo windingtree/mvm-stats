@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "scripts/deploy.sh",
     "start": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public --hot",
     "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public",
     "build": "webpack --config ./webpack/prod/webpack.prod.config.js"
