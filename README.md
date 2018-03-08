@@ -19,7 +19,7 @@ After runing `npm start` or `npm run dev`
 
 #### Deploy to Github Pages
 
-`git subtree push --prefix public origin gh-pages`
+`npm run deploy`
 
 #### Dependencies ####
 
