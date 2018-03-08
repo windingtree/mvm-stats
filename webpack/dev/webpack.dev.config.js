@@ -42,7 +42,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(BUILD_DIR, '/'),
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
     // Copy files from /src to /public
