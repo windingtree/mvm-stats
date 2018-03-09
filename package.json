@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --hot --host 0.0.0.0 --disable-host-check",
     "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --host 0.0.0.0 --disable-host-check",
-    "build": "webpack --config ./webpack/prod/webpack.prod.config.js"
+    "build": "npm run clean && webpack --config ./webpack/prod/webpack.prod.config.js",
+    "deploy": "scripts/deploy.sh",
+    "clean": "rm -rf public && mkdir public"
   },
   "author": "Nico Calabrese",
   "license": "ISC",
