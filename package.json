@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public --hot",
-    "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public",
-    "build": "webpack --config ./webpack/prod/webpack.prod.config.js"
+    "deploy": "scripts/deploy.sh",
+    "start": "npm run clean && webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public --hot",
+    "dev": "npm run clean && webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base public",
+    "build": "npm run clean && webpack --config ./webpack/prod/webpack.prod.config.js",
+    "clean": "rm -rf public && mkdir public"
   },
   "author": "Nico Calabrese",
   "license": "ISC",

@@ -13,15 +13,12 @@ export default class AppFooter extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
   }
 
   render() {
-    const self = this;
     const lifLogo = '../img/content/logo-lif-w.svg';
 
     return (

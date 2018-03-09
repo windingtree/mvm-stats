@@ -10,16 +10,14 @@ export default class FAQ extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
     window.scrollTo(0, 0);
   }
 
   render () {
-    const self = this;
+    const {showAlert} = this.props;
 
     return (
       <div id="app-content">

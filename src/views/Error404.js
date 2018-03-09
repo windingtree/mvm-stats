@@ -11,11 +11,9 @@ export default class NotFound extends Component {
   }
 
   componentWillMount() {
-    const self = this;
   }
 
   componentDidMount() {
-    const self = this;
   }
 
   render () {
