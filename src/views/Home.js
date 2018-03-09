@@ -27,7 +27,7 @@ export default class Home extends Component {
         }]
       },
       chartOptions: {
-        responsive: false,
+        responsive: true,
         tooltips: {
           mode: 'index',
           intersect: false,
