@@ -38,10 +38,6 @@
   }
 
   .chart-wrapper {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    max-height: 400px;
     margin: 30px auto;
 
     canvas {
