@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Stat from '../components/Stat.js'
-
+import StatsLayout from '../layouts/StatsLayout.js'
 // Modules
 var LineChart = require("react-chartjs").Line;
 
@@ -53,27 +53,6 @@ export default class Home extends Component {
     const {chartData, chartOptions} = this.state;
     const {showAlert} = this.props;
 
-    const mvmStageProps = {
-      mainTitile: 'MVM Stage',
-      mainValue: '3/6',
-      linkTitle: 'More info...',
-      link: 'FAQ',
-      icon: 'timelapse',
-     }
-     const mvmFundsProps = {
-       mainTitile: 'MVM Funds',
-       mainValue: '16,278',
-       linkTitle: 'More info...',
-       link: 'FAQ',
-       icon:'timelapse',
-      }
-      const mvmBurnedProps = {
-        mainTitile: 'Tokens Burned',
-        mainValue: '25 M',
-        linkTitle: 'More info...',
-        link: 'FAQ',
-        icon:'whatshot',
-       }
     return (
       <div id="app-content">
 
@@ -100,21 +79,7 @@ export default class Home extends Component {
 
         <article className="container">
           <div className="row">
-            <div className="col-12 col-md-4  justify-self-center">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <Stat { ...mvmFundsProps }/>
-              </div>
-            </div>
-            <div className="col-12 col-md-4">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <Stat { ...mvmStageProps }/>
-              </div>
-            </div>
-            <div className="col-12 col-md-4">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <Stat { ...mvmBurnedProps }/>
-              </div>
-            </div>
+            <StatsLayout />
           </div>
 
           <div className="row">
