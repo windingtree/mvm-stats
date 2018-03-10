@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stat from '../components/Stat.js'
+import StatContainer from '../components/StatContainer.js'
 
 export default class StatsLayout extends Component {
 
@@ -20,36 +20,34 @@ export default class StatsLayout extends Component {
      },
      mvmBurnedProps : {
         mainTitile: 'Tokens Burned',
-        mainValue: '25 M',
         linkTitle: 'More info...',
         link: 'FAQ',
         icon:'whatshot',
+        callData: '0x555f323a',
+        toContract: '0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A',
       },
   }
   constructor(props) {
     super(props);
-    this.state = {
-      name: 'StatsLayout'
-    };
   }
 
   render() {
     const {mvmStageProps, mvmFundsProps, mvmBurnedProps} = this.props
     return (
       <React.Fragment>
-        <div className="col-12 col-md-4  justify-self-center">
+        <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <Stat { ...mvmFundsProps }/>
+            <StatContainer { ...mvmFundsProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <Stat { ...mvmStageProps }/>
+            <StatContainer { ...mvmStageProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <Stat { ...mvmBurnedProps }/>
+            <StatContainer { ...mvmBurnedProps }/>
           </div>
         </div>
       </React.Fragment>
