@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import StatsGroup from '../components/StatsGroup.js'
 // Modules
 var LineChart = require("react-chartjs").Line;
 
@@ -78,52 +78,7 @@ export default class Home extends Component {
 
         <article className="container">
           <div className="row">
-
-            <div className="col-12 col-md-4  justify-self-center">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <div className="card-body text-center">
-                  <Link
-                    onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
-                    to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
-                    <i className="material-icons link-light">help_outline</i>
-                  </Link>
-                  <i className="material-icons material-icons--xl">account_balance_wallet</i>
-                  <h1 className="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
-                  <p className="card-text text--xl text-success"><strong>16,278</strong></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-4">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <div className="card-body text-center">
-                  <Link
-                    onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
-                    to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
-                    <i className="material-icons link-light">help_outline</i>
-                  </Link>
-                  <i className="material-icons material-icons material-icons--xl">timelapse</i>
-                  <h1 className="h5 card-title text-muted"><strong>MVM Stage</strong></h1>
-                  <p className="card-text text--xl text-dark"><strong>3/6</strong></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-4">
-              <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-                <div className="card-body text-center">
-                  <Link
-                    onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
-                    to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
-                    <i className="material-icons link-light">help_outline</i>
-                  </Link>
-                  <i className="material-icons material-icons material-icons--xl">whatshot</i>
-                  <h1 className="h5 card-title text-muted"><strong>Tokens Burned</strong></h1>
-                  <p className="card-text text--xl text-danger"><strong>25 M</strong></p>
-                </div>
-              </div>
-            </div>
-
+            <StatsGroup />
           </div>
 
           <div className="row">
