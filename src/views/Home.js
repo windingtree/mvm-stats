@@ -27,7 +27,8 @@ export default class Home extends Component {
         }]
       },
       chartOptions: {
-        responsive: false,
+        responsive: true,
+        maintainAspectRatio: true,
         tooltips: {
           mode: 'index',
           intersect: false,
@@ -64,7 +65,7 @@ export default class Home extends Component {
                 <svg height="4" width="80">
                   <line x1="0" y1="0" x2="80" y2="0" style={{stroke: '#fff', strokeWidth:4}} />
                 </svg>
-                <div className="chart-wrapper  animated tdShrinkIn">
+                <div className="chart-wrapper  animated tdShrinkIn  col-lg-8" >
                   <div className="chart-wrapper__header">
                     Sell Price
                   </div>

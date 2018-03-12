@@ -9,6 +9,7 @@ When this componen is used inside the App-hero some additional styles will be ap
 */
 
 .chart-wrapper {
+  position: relative;
   padding: 30px 30px;
   margin-bottom: 20px;
   border-radius: 2px;
