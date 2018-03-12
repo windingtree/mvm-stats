@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Stat from '../components/Stat.js'
-import StatsLayout from '../layouts/StatsLayout.js'
+import StatsGroup from '../components/StatsGroup.js'
 // Modules
 var LineChart = require("react-chartjs").Line;
 
@@ -79,7 +78,7 @@ export default class Home extends Component {
 
         <article className="container">
           <div className="row">
-            <StatsLayout />
+            <StatsGroup />
           </div>
 
           <div className="row">
