@@ -4,20 +4,22 @@ import StatContainer from '../components/StatContainer.js'
 export default class StatsLayout extends Component {
 
   static defaultProps =  {
+    mvmFundsProps : {
+       mainTitile: 'MVM Funds',
+       mainValue: '16,278',
+       linkTitle: 'More info...',
+       link: 'FAQ',
+       icon:'account_balance_wallet',
+       textColor: 'text-success',
+     },
     mvmStageProps : {
       mainTitile: 'MVM Stage',
       mainValue: '3/6',
       linkTitle: 'More info...',
       link: 'FAQ',
       icon: 'timelapse',
+      textColor: 'text-dark',
     },
-    mvmFundsProps : {
-       mainTitile: 'MVM Funds',
-       mainValue: '16,278',
-       linkTitle: 'More info...',
-       link: 'FAQ',
-       icon:'timelapse',
-     },
      mvmBurnedProps : {
         mainTitile: 'Tokens Burned',
         linkTitle: 'More info...',
@@ -25,6 +27,7 @@ export default class StatsLayout extends Component {
         icon:'whatshot',
         callData: '0x555f323a',
         toContract: '0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A',
+        textColor: 'text-danger',
       },
   }
   constructor(props) {
