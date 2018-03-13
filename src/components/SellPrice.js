@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 const SellPrice = props => {
+
   const { sellPriceTitle, sellPriceUSD, sellPriceETH } = props
   return (
     <React.Fragment>
@@ -13,6 +14,12 @@ const SellPrice = props => {
       </div>
     </React.Fragment>
   )
+}
+
+SellPrice.defaultProps =  {
+  sellPriceTitle: "Sell Price",
+  sellPriceUSD: "750",
+  sellPriceETH: "1"
 }
 
 export default SellPrice;

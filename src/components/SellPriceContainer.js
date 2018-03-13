@@ -5,11 +5,7 @@ import SellPrice from './SellPrice'
 
 export default class SellPriceContainer extends Component {
 
-  static defaultProps =  {
-    sellPriceTitle: "Sell Price",
-    sellPriceUSD: "750",
-    sellPriceETH: "1"
-  }
+
 
   constructor() {
     super();
