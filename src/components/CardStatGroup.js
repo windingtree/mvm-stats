@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import StatContainer from '../components/StatContainer.js'
+import CardStatContainer from '../components/CardStatContainer.js'
 
-export default class StatsLayout extends Component {
+export default class CardStatGroup extends Component {
 
   static defaultProps =  {
     mvmFundsProps : {
@@ -40,17 +40,17 @@ export default class StatsLayout extends Component {
       <React.Fragment>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <StatContainer { ...mvmFundsProps }/>
+            <CardStatContainer { ...mvmFundsProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <StatContainer { ...mvmStageProps }/>
+            <CardStatContainer { ...mvmStageProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <StatContainer { ...mvmBurnedProps }/>
+            <CardStatContainer { ...mvmBurnedProps }/>
           </div>
         </div>
       </React.Fragment>

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-// Components
-// import MainNav from './MainNav';
-
 export default class AppHeader extends Component {
 
   constructor(props) {
@@ -29,8 +26,6 @@ export default class AppHeader extends Component {
             <img className="brand" src={lifLogo}/>
           </Link>
         </h1>
-
-        {/* <MainNav/> */}
       </header>
     );
   }

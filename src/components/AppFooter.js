@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// Components
-import MainNav from './MainNav';
-
 export default class AppFooter extends Component {
 
   constructor(props) {
