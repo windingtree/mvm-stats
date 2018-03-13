@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import StatsGroup from '../components/StatsGroup.js'
-// Modules
-var LineChart = require("react-chartjs").Line;
+import ChartPriceContainer from '../components/ChartPriceContainer.js'
+import CardStatGroup from '../components/CardStatGroup.js'
 
 export default class Home extends Component {
 
@@ -10,34 +9,6 @@ export default class Home extends Component {
     super(props);
     this.state = {
       name: 'home',
-      chartData: {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        datasets: [{
-          label: "Prime and Fibonacci",
-          fillColor: "transparent",
-          strokeColor: "#FACE5D",
-          pointColor: "#FACE5D",
-          data: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-        }, {
-          label: "My Second dataset",
-          fillColor: "transparent",
-          strokeColor: "#FF6384",
-          pointColor: "#FF6384",
-          data: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-        }]
-      },
-      chartOptions: {
-        responsive: true,
-        maintainAspectRatio: true,
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-        },
-        hover: {
-          mode: 'nearest',
-          intersect: true
-        }
-      }
     };
   }
 
@@ -50,7 +21,6 @@ export default class Home extends Component {
   }
 
   render () {
-    const {chartData, chartOptions} = this.state;
     const {showAlert} = this.props;
 
     return (
@@ -65,12 +35,7 @@ export default class Home extends Component {
                 <svg height="4" width="80">
                   <line x1="0" y1="0" x2="80" y2="0" style={{stroke: '#fff', strokeWidth:4}} />
                 </svg>
-                <div className="chart-wrapper  animated tdShrinkIn  col-lg-8" >
-                  <div className="chart-wrapper__header">
-                    Sell Price
-                  </div>
-                  <LineChart data={chartData} options={chartOptions} width="640" height="320"/>
-                </div>
+                <ChartPriceContainer />
               </div>
             </div>
           </div>
@@ -79,7 +44,7 @@ export default class Home extends Component {
 
         <article className="container">
           <div className="row">
-            <StatsGroup />
+            <CardStatGroup />
           </div>
 
           <div className="row">

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-const Stat = props => {
+const CardStat = props => {
   const { mainTitile, mainValue, linkTitle, link, icon, textColor } = props
   return (
     <div className="card-body text-center">
@@ -17,4 +17,4 @@ const Stat = props => {
   )
 }
 
-export default Stat;
+export default CardStat;
