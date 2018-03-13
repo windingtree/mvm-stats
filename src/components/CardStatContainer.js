@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import fetch from 'isomorphic-fetch';
 import {Link} from 'react-router-dom';
-import Stat from './Stat'
+import CardStat from './CardStat'
 
 const staticParams='module=proxy&action=eth_call&tag=latest&apikey=5FUHMWGH51JT3G9EARU4K4QH3SVWYIMFIB'
 
-export default class StatContainer extends Component {
+export default class CardStatContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,6 +29,6 @@ export default class StatContainer extends Component {
   render() {
     const {mainValue} = this.state;
     const props = this.props;
-    return <Stat mainValue={mainValue} {...props}/>;
+    return <CardStat mainValue={mainValue} {...props}/>;
   }
 }
