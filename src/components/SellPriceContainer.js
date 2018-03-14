@@ -5,8 +5,6 @@ import SellPrice from './SellPrice'
 
 export default class SellPriceContainer extends Component {
 
-
-
   constructor() {
     super();
     this.state = {
@@ -26,5 +24,4 @@ export default class SellPriceContainer extends Component {
       />
     );
   }
-
 }

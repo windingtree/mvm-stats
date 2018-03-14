@@ -12,7 +12,6 @@ const mvmFundsProps = {
 };
 const mvmStageProps = {
   mainTitile: 'MVM Stage',
-  mainValue: '3/6',
   linkTitle: 'More info...',
   link: 'FAQ',
   icon: 'timelapse',
@@ -26,7 +25,8 @@ const mvmBurnedProps = {
   toContract: '0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A',
   textColor: 'text-danger',
 };
-const mvmBurnedCallData = '0x555f323a'
+const mvmBurnedCallData = '0x555f323a';
+const mvmStageCallData = '0xb4f5a21a';
 
 export default class CardStatGroup extends Component {
 
@@ -34,7 +34,8 @@ export default class CardStatGroup extends Component {
     super(props);
   }
 
-  _renderCardStat = value => <CardStat { ...mvmBurnedProps } mainValue={value}/>
+  _renderBurnedCardStats = value => <CardStat { ...mvmBurnedProps } mainValue={value}/>
+  _renderStageCardStats = value => <CardStat { ...mvmStageProps } mainValue={`${value}/24`}/>
 
   render() {
     return (
@@ -46,13 +47,15 @@ export default class CardStatGroup extends Component {
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <CardStat { ...mvmStageProps }/>
+          <EtherScanFetcher callData={mvmBurnedCallData}
+            render={this._renderStageCardStats}
+          />
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
             <EtherScanFetcher callData={mvmBurnedCallData}
-              render={this._renderCardStat}
+              render={this._renderBurnedCardStats}
             />
           </div>
         </div>
