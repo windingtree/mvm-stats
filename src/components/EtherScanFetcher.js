@@ -26,7 +26,9 @@ export default class EtherScanFetcher extends Component {
      return fetch(url)
      .then(res => res.json())
      .then(({result}) => {
-       this.setState({fetchedValue: parseInt(result, 16)})
+       let value = result.split('x')[1];
+       if (!value) value = 0;
+       this.setState({fetchedValue: parseInt(value, 16)})
      })
   }
 
