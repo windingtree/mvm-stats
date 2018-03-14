@@ -17,4 +17,8 @@ const CardStat = props => {
   )
 }
 
+CardStat.defaultProps = {
+  linkTitle: 'More info...',
+  link: 'FAQ',
+}
 export default CardStat;
