@@ -1,37 +1,37 @@
 import React, {Component} from 'react';
 import fetch from 'isomorphic-fetch';
 import {Link} from 'react-router-dom';
-import CardStat from './CardStat'
+import CONFIG from '../../config.js'
 
 const staticParams='module=proxy&action=eth_call&tag=latest&apikey=5FUHMWGH51JT3G9EARU4K4QH3SVWYIMFIB'
 
-export default class CardStatContainer extends Component {
+export default class EtherScanFetcher extends Component {
+  static defaultProps = {
+    toContract : CONFIG.mvmContract
+  }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      mainValue : -1
+      fetchedValue : -1,
     }
   }
-
   componentDidMount() {
     const {toContract, callData} = this.props;
-    if(!toContract || !callData) return;
-    this._fetchFromEtherscan(toContract, callData)
+    this._fetchFromEtherscan(CONFIG.mvmContract, callData)
   }
-  
+
   _fetchFromEtherscan = (toContract, callData) => {
     const url = `https://api.etherscan.io/api?${staticParams}&to=${toContract}&data=${callData}`
      return fetch(url)
      .then(res => res.json())
-     .then(({result}) =>
-       this.setState({mainValue: parseInt(result, 16)})
-   )
+     .then(({result}) => {
+       this.setState({fetchedValue: parseInt(result, 16)})
+     })
   }
 
   render() {
-    const {mainValue} = this.state;
-    const props = this.props;
-    return <CardStat mainValue={mainValue} {...props}/>;
+    const {fetchedValue} = this.state;
+    return this.props.render(fetchedValue);
   }
 }

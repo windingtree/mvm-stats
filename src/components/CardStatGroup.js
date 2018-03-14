@@ -1,57 +1,59 @@
 import React, { Component } from 'react';
-import CardStatContainer from '../components/CardStatContainer.js'
+import CardStat from '../components/CardStat.js'
+import EtherScanFetcher from '../components/EtherScanFetcher.js'
+
+const mvmFundsProps = {
+  mainTitile: 'MVM Funds',
+  mainValue: '16,278',
+  linkTitle: 'More info...',
+  link: 'FAQ',
+  icon:'account_balance_wallet',
+  textColor: 'text-success',
+};
+const mvmStageProps = {
+  mainTitile: 'MVM Stage',
+  mainValue: '3/6',
+  linkTitle: 'More info...',
+  link: 'FAQ',
+  icon: 'timelapse',
+  textColor: 'text-dark',
+};
+const mvmBurnedProps = {
+  mainTitile: 'Tokens Burned',
+  linkTitle: 'More info...',
+  link: 'FAQ',
+  icon:'whatshot',
+  toContract: '0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A',
+  textColor: 'text-danger',
+};
+const mvmBurnedCallData = '0x555f323a'
 
 export default class CardStatGroup extends Component {
-
-  static defaultProps =  {
-    mvmFundsProps : {
-       mainTitile: 'MVM Funds',
-       mainValue: '16,278',
-       linkTitle: 'More info...',
-       link: 'FAQ',
-       icon:'account_balance_wallet',
-       textColor: 'text-success',
-     },
-    mvmStageProps : {
-      mainTitile: 'MVM Stage',
-      mainValue: '3/6',
-      linkTitle: 'More info...',
-      link: 'FAQ',
-      icon: 'timelapse',
-      textColor: 'text-dark',
-    },
-     mvmBurnedProps : {
-        mainTitile: 'Tokens Burned',
-        linkTitle: 'More info...',
-        link: 'FAQ',
-        icon:'whatshot',
-        callData: '0x555f323a',
-        toContract: '0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A',
-        textColor: 'text-danger',
-      },
-  }
 
   constructor(props) {
     super(props);
   }
 
+  _renderCardStat = value => <CardStat { ...mvmBurnedProps } mainValue={value}/>
+
   render() {
-    const {mvmStageProps, mvmFundsProps, mvmBurnedProps} = this.props
     return (
       <React.Fragment>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <CardStatContainer { ...mvmFundsProps }/>
+            <CardStat { ...mvmFundsProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <CardStatContainer { ...mvmStageProps }/>
+            <CardStat { ...mvmStageProps }/>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <CardStatContainer { ...mvmBurnedProps }/>
+            <EtherScanFetcher callData={mvmBurnedCallData}
+              render={this._renderCardStat}
+            />
           </div>
         </div>
       </React.Fragment>
