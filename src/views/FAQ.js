@@ -2,6 +2,15 @@ import React, {Component} from 'react';
 
 export default class FAQ extends Component {
 
+  static defaultProps =  {
+    questions: [
+      [ 'How it works?',
+        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'],
+      [ 'How to sell tokens back to the MVM',
+        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'],
+    ]
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -17,8 +26,8 @@ export default class FAQ extends Component {
   }
 
   render () {
-    const {showAlert} = this.props;
-
+    const {showAlert, questions} = this.props;
+const faqLenght = questions.length;
     return (
       <div id="app-content">
 
@@ -41,27 +50,21 @@ export default class FAQ extends Component {
           </div>
           <div className="row">
             <div className="col">
-              <h3>
-                <i className="fas fa-arrow-right fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
-                <strong className="text-secondary  animated tdFadeIn">Is this the first question?</strong>
-              </h3>
-              <p className="text--lg  animated tdFadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              {
 
-              <hr className="mb-4"/>
+                questions.map((question, index) =>
+                  <React.Fragment key={question[0]}>
+                    <h3>
+                      <i className="fas fa-arrow-right fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
+                      <strong className="text-secondary  animated tdFadeIn">{question[0]}</strong>
+                    </h3>
+                    <p className="text--lg  animated tdFadeIn">{question[1]}</p>
 
-              <h3>
-                <i className="fas fa-arrow-right fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
-                <strong className="text-secondary  animated tdFadeIn">Can you answer the second one?</strong>
-              </h3>
-              <p className="text--lg  animated tdFadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    { index<faqLenght-1 && <hr className="mb-4"/> }
+                  </React.Fragment>
+                )
+              }
 
-              <hr className="mb-4"/>
-
-              <h3>
-                <i className="fas fa-arrow-right fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
-                <strong className="text-secondary  animated tdFadeIn">What about the third?</strong>
-              </h3>
-              <p className="text--lg  animated tdFadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             </div>
           </div>
         </div>

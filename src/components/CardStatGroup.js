@@ -30,6 +30,7 @@ export default class CardStatGroup extends Component {
         textColor: 'text-danger',
       },
   }
+
   constructor(props) {
     super(props);
   }

@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 const CardStat = props => {
-  const { mainTitile, mainValue, linkTitle, link, icon, textColor } = props
+
+  const { mainTitile, mainValue, linkTitle, link, icon, textColor } = props;
+  
   return (
     <div className="card-body text-center">
       <Link
