@@ -18,10 +18,10 @@ export default class EtherScanFetcher extends Component {
   }
   componentDidMount() {
     const {toContract, callData} = this.props;
-    this._fetchFromEtherscan(CONFIG.mvmContract, callData)
+    this._fetchUintFromEtherscan(CONFIG.mvmContract, callData)
   }
 
-  _fetchFromEtherscan = (toContract, callData) => {
+  _fetchUintFromEtherscan = (toContract, callData) => {
     const url = `https://api.etherscan.io/api?${staticParams}&to=${toContract}&data=${callData}`
      return fetch(url)
      .then(res => res.json())
