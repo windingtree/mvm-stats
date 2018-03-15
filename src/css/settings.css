@@ -1,5 +1,16 @@
 /* Settings */
 
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
+
+/* Bootstrap */
+/* @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+/* Assets */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css');
+
 :root {
   --fontPrimary: 'Catamaran', sans-serif;
 
