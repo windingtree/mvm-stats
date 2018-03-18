@@ -25,22 +25,32 @@ const ChartPrice = props => {
   )
 }
 
+const accumDistribution = [0.018, 0.117, 0.351, 0.767, 1.407, 2.309, 3.511, 5.047, 6.952, 9.257, 11.995, 15.196, 18.889, 23.104, 27.870,
+  33.215, 39.166, 45.749, 52.992, 60.921, 69.561, 78.938, 89.076, 100];
+const totalSupply = 24976541;
+const initialETH = 5164;
+var buyPrices = [];
+for (var i = 0; i < accumDistribution.length; i++)
+  buyPrices.unshift(parseFloat((initialETH/totalSupply) * accumDistribution[i]).toFixed(5));
+
 ChartPrice.defaultProps =  {
   showChartHeader: true,
   chartData: {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ,20, 21, 22, 23, 24],
     datasets: [{
-      label: "Prime and Fibonacci",
+      label: "Buy Price (ETH)",
       fillColor: "transparent",
       strokeColor: "#FACE5D",
       pointColor: "#FACE5D",
-      data: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+      data: buyPrices,
+      bezierCurveTension : 1,
+      offsetGridLines : true
     }, {
-      label: "My Second dataset",
+      label: "% of ETH Claimed",
       fillColor: "transparent",
       strokeColor: "#FF6384",
       pointColor: "#FF6384",
-      data: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+      data: accumDistribution
     }]
   },
   chartOptions: {
