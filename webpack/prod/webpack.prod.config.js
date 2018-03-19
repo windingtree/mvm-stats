@@ -15,6 +15,7 @@ console.log('Building App ... \n================\n');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     APP_DIR + '/index.js'
   ],
   module: {
