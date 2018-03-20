@@ -20,34 +20,17 @@ export default class ChartPriceContainer extends Component {
                 0.00007, 0.00002, 0 ],
         bezierCurveTension : 1,
         offsetGridLines : true
-      },
-      ethClaimedDataSet : {
-        label: "% of ETH Claimed",
-        fillColor: "transparent",
-        strokeColor: "#FF6384",
-        pointColor: "#FF6384",
-        data: [ 0.018, 0.117, 0.351, 0.767, 1.407, 2.309, 3.511, 5.047, 6.952,
-                9.257, 11.995, 15.196, 18.889, 23.104, 27.870, 33.215, 39.166,
-                45.749, 52.992, 60.921, 69.561, 78.938, 89.076, 100 ]
       }
     }
   }
 
   render() {
-    const {chartOptions, ethClaimedDataSet, buyPriceDataSet, labels} = this.state;
-    const ethClaimedChartData = {
-      labels,
-      datasets: [ethClaimedDataSet]
-    }
+    const {ethClaimedDataSet, buyPriceDataSet, labels} = this.state;
     const buyPriceChartData = {
       labels,
       datasets: [buyPriceDataSet]
     }
-    return (
-      <React.Fragment>
-        <ChartPrice chartData={ethClaimedChartData} chartOptions={chartOptions} />
-        <ChartPrice chartData={buyPriceChartData} chartOptions={chartOptions} />
-      </React.Fragment>
-    );
+    return <ChartPrice chartData={buyPriceChartData} />;
+
   }
 }
