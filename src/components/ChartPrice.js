@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import { Line as LineChart } from 'react-chartjs';
 import SellPriceContainer from './SellPriceContainer';
 import EtherScanFetcher from '../components/EtherScanFetcher.js'
-import SellPrice from './SellPrice'
 
 const sellPriceCallData = '0x018a25e8'
 
@@ -26,7 +25,7 @@ const ChartPrice = props => {
 }
 
 const _renderSellPriceContainer = value => {
-  return <SellPrice sellPriceETH={value}/>
+  return <SellPriceContainer sellPriceETH={value}/>
 }
 
 ChartPrice.defaultProps = {
