@@ -3,8 +3,7 @@ import CardStat from '../components/CardStat.js'
 import EtherScanFetcher from '../components/EtherScanFetcher.js'
 
 const mvmFundsProps = {
-  mainTitile: 'MVM Funds',
-  mainValue: '16,278',
+  mainTitile: 'MVM Funds (ETH)',
   icon:'account_balance_wallet',
   textColor: 'text-success',
 };
@@ -27,6 +26,7 @@ export default class CardStatGroup extends Component {
     super(props);
   }
 
+  _renderBalanceCardStats = value => <CardStat { ...mvmFundsProps } mainValue={value}/>
   _renderBurnedCardStats = value => <CardStat { ...mvmBurnedProps } mainValue={value}/>
   _renderStageCardStats = value => <CardStat { ...mvmStageProps } mainValue={`${value}/24`}/>
 
@@ -35,7 +35,9 @@ export default class CardStatGroup extends Component {
       <React.Fragment>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <CardStat { ...mvmFundsProps }/>
+          <EtherScanFetcher callData={'balance'}
+            render={this._renderBalanceCardStats}
+          />
           </div>
         </div>
         <div className="col-12 col-md-4">
