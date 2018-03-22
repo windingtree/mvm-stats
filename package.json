@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,10 @@
     "start": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --hot --host 0.0.0.0 --disable-host-check",
     "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --host 0.0.0.0 --disable-host-check",
     "build": "npm run clean && webpack --config ./webpack/prod/webpack.prod.config.js",
-    "deploy": "scripts/deploy.sh",
-    "clean": "rm -rf public && mkdir public"
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public",
+    "clean": "rm -rf public && mkdir public",
+    "alias": "now alias --token=$NOW_TOKEN",
+    "now-start": "serve --single ./public"
   },
   "author": "Nico Calabrese",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
+    "serve": "^6.5.3",
     "web3": "^1.0.0-beta.33",
     "webpack-dev-server": "^2.11.1"
   },
@@ -47,5 +50,9 @@
     "webpack": "^3.11.0",
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-create-file-plugin": "^0.1.0"
+  },
+  "now": {
+    "name": "wt-mvm-stats",
+    "alias": "mvm-stats.windingtree.com"
   }
 }
