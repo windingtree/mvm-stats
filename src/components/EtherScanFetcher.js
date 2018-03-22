@@ -19,7 +19,7 @@ export default class EtherScanFetcher extends Component {
   componentDidMount() {
     const {toContract, callData} = this.props;
     if (callData == 'balance') {
-      this._fetcBalanceFromEtherscan(CONFIG.mvmContract)
+      this._fetchBalanceFromEtherscan(CONFIG.mvmContract)
     } else {
       this._fetchUintFromEtherscan(CONFIG.mvmContract, callData)
     }
@@ -36,7 +36,7 @@ export default class EtherScanFetcher extends Component {
      })
   }
 
-  _fetcBalanceFromEtherscan = (ofAddress) => {
+  _fetchBalanceFromEtherscan = (ofAddress) => {
     const url = `https://api.etherscan.io/api?module=account&action=balance&apikey=5FUHMWGH51JT3G9EARU4K4QH3SVWYIMFIB&address=${ofAddress}`
      return fetch(url)
      .then(res => res.json())
