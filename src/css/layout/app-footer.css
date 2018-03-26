@@ -1,5 +1,23 @@
 /* Layout: App-footer */
 
+/*---
+title: App Footer
+section: Layout
+---
+
+The `#app-footer` is a wrapper to contain elements or components that will be
+placed on the bottom area of each view (when based on the main layout).
+
+Its background color is based on `--colorBG`, and also has a padding and a top
+border.<br/>
+
+```example:html
+<div id="app-footer">
+  <p>content...</p>
+</div>
+```
+*/
+
 #app-footer {
   padding: 40px 30px;
   border-top: 1px solid var(--colorLight);
