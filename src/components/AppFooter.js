@@ -9,12 +9,6 @@ export default class AppFooter extends Component {
     };
   }
 
-  componentWillMount() {
-  }
-
-  componentDidMount() {
-  }
-
   render() {
     const lifLogo = '../img/content/logo-lif-w.svg';
 
