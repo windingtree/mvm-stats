@@ -8,6 +8,7 @@ jobs:
   - stage: build and deploy
     if: tag IS present
     script:
+    - npm i
     - npm i -g now
     - npm run deploy
     - npm run alias
