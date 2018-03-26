@@ -13,7 +13,7 @@ export default class EtherScanFetcher extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fetchedValue : -1,
+      fetchedValue : 0,
     }
   }
   componentDidMount() {
