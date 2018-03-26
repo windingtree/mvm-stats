@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+cache: npm
+install: true
+jobs:
+  include:
+  - stage: build and deploy
+    if: tag IS present
+    script:
+    - npm i -g now
+    - npm run deploy
+    - npm run alias
+env:
+  global:
+    secure: dqfcGEzgtaaztx9lp+O6zHMwOHhvvybM1GAITz5+CE87OG/RQDvdXFniyHw5wcgDjnUxWsITnoOMGFsX/TiaV2C8+Ns3O5lC8cH762ZkgR7HXshUIH9dfjOp2Tz8k8aBOq89Gbt+rB5rWIqjmvoCN8jkfSn1yEOOuhNgUgHZmdtxbrzEhFIc9bycUZbL9tyZUm/ps3N6jT6UhbMv8QPuao/F1iBzKsP1mvqEFERM+HMjWblEbmVzmDC8yKqoBNkdTPZvMBJag6t3lBYo+kjh8k/y2q32V2tRE3XNRwyKEnXLFAzo6U/Pfm+bwhiNeg9HlceHeqNv4DErwHtvLIDj0CpGXA86RUCDxtYUiWvCkoe+q37EuOChCWydEvm9Xw9Cbi+6MgWODoqGlxGa+g4bN+i1t6lQ0j7K5KRo/KMuFIwaE0HKZhZawiuPSB1kAQNOm5ePCtpVzoh1yMF6ZLM6f97pnRaNtvZKvhWKLoLbjRjLjfR5/3fcFEjxr/IcooBt81nA6sqAR0CiWYSCDkn3XDvIG/w8nC+D0ufIX/7kotPhNXqBh2VzkETbUynXq4Hx446pZiE7q/MG9qEENSjtcK1sApTPcTdJQShJILWNmWrvTk8ixE7+u71KUmfnEgTqI6oJXvLooBuPeoO1LGFiaQHFS3NT99BQ6Fwrm3+/dRw=
