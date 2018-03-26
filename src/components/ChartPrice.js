@@ -25,6 +25,7 @@ const ChartPrice = props => {
 }
 
 const _renderSellPriceContainer = value => {
+  value = value/100000
   return <SellPriceContainer sellPriceETH={value}/>
 }
 
