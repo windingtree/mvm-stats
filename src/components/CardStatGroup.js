@@ -27,7 +27,7 @@ export default class CardStatGroup extends Component {
   }
 
   _renderBalanceCardStats = value => <CardStat { ...mvmFundsProps } mainValue={value}/>
-  _renderBurnedCardStats = value => <CardStat { ...mvmBurnedProps } mainValue={value}/>
+  _renderBurnedCardStats = value => <CardStat { ...mvmBurnedProps } mainValue={parseInt(value/10**18)}/>
   _renderStageCardStats = value => <CardStat { ...mvmStageProps } mainValue={`${value}/24`}/>
 
   render() {
@@ -42,7 +42,7 @@ export default class CardStatGroup extends Component {
         </div>
         <div className="col-12 col-md-4">
           <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-          <EtherScanFetcher callData={mvmBurnedCallData}
+          <EtherScanFetcher callData={mvmStageCallData}
             render={this._renderStageCardStats}
           />
           </div>

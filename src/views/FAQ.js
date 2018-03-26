@@ -106,11 +106,13 @@ export default class FAQ extends Component {
                 <strong className="text-secondary  animated tdFadeIn">First Transaction</strong>
               </h4>
               <p className="text--lg  animated tdFadeIn">To: <strong>lif.windingtree.eth - 0xeb9951021698b42e4399f9cbb6267aa35f82d59d</strong></p>
+              <p className="text--lg  animated tdFadeIn">Gas: <small>100000</small></p>
               <p className="text--lg  animated tdFadeIn">Data: <small>{self.state.approveData}</small></p>
               <h4>
                 <strong className="text-secondary  animated tdFadeIn">Second Transaction</strong>
               </h4>
               <p className="text--lg  animated tdFadeIn">To: <strong>mvm.windingtree.eth - 0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A</strong></p>
+              <p className="text--lg  animated tdFadeIn">Gas: <small>200000</small></p>
               <p className="text--lg  animated tdFadeIn">Data: <small>{self.state.sellTokensData}</small></p>
             </div>
           </div>
