@@ -1,11 +1,12 @@
 /* CHART */
 
-/*
-@styleguide
-@title Chart container
+/*---
+title:   Chart Wrapper
+section: Components
+---
 
-The chart-wrapper component is a container for the chartJS generated code. (Documentation here: www.chartjs.org)
-When this componen is used inside the App-hero some additional styles will be applied.
+The `.chart-wrapper` component is a container for the chartJS generated code. (Documentation here: www.chartjs.org)<br/>
+When the component is used inside the App-hero some additional styles will be applied.
 */
 
 .chart-wrapper {
