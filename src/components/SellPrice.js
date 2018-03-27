@@ -9,9 +9,9 @@ const SellPrice = props => {
     <React.Fragment>
       <b>{sellPriceTitle}</b>
       <div className="float-right">
-        <b className="ml-3">USD:</b> {sellPriceUSD}
+        <b className="ml-3">USD:</b> {parseFloat(sellPriceUSD).toFixed(6)}
         <span className="ml-3 text-light">|</span>
-        <b className="ml-3">ETH:</b> {sellPriceETH}
+        <b className="ml-3">ETH:</b> {parseFloat(sellPriceETH).toFixed(6)}
       </div>
     </React.Fragment>
   )
@@ -19,8 +19,8 @@ const SellPrice = props => {
 
 SellPrice.defaultProps =  {
   sellPriceTitle: "Sell Price",
-  sellPriceUSD: "750",
-  sellPriceETH: "1"
+  sellPriceUSD: "...",
+  sellPriceETH: "..."
 }
 
 export default SellPrice;

@@ -10,12 +10,6 @@ export default class AppHeader extends Component {
     };
   }
 
-  componentWillMount() {
-  }
-
-  componentDidMount() {
-  }
-
   render() {
     const lifLogo = 'img/content/logo-lif-w.svg';
 
