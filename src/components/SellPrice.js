@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 
 const SellPrice = props => {
 
-  const { sellPriceTitle, sellPriceUSD, sellPriceETH } = props
+  const { sellPriceTitle, sellPriceUSD, sellPriceETH } = props;
+  
   return (
     <React.Fragment>
       <b>{sellPriceTitle}</b>

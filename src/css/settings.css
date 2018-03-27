@@ -1,5 +1,70 @@
 /* Settings */
 
+/*---
+title:   Fonts
+section: Overview
+---
+
+### Primary font family
+The font we are using is called "Catamaran".<br/>
+Link to Google fonts: https://fonts.google.com/specimen/Catamaran
+
+The font is imported from Google Fonts, and defined in the `--fontPrimary` variable in `src/css/settings.css`.
+
+<p class="hide-codeblock">
+```example
+<h1>Catamaran Font</h1>
+<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+volutpat.</p>
+```
+```css
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
+
+:root {
+  --fontPrimary: 'Catamaran', sans-serif;
+}
+```
+
+*/
+
+/*---
+title:   Colors
+section: Overview
+---
+
+The colors used on the app are defined as variables in `settings.css`.
+
+```example:color
+@color: #129697   @name: --colorPrimary
+@color: #48ddca   @name: --colorAccent
+@color: #5F6A6F   @name: --colorSecondary
+@color: #55c46e   @name: --colorSuccess
+@color: #F54D6F   @name: --colorDanger
+@color: #FACE5D   @name: --colorWarning
+@color: #0aa8ca   @name: --colorInfo
+@color: #CBCCCC   @name: --colorLight
+@color: #0d989d   @name: --colorDark
+@color: #878f97   @name: --colorMuted
+@color: #fff      @name: --colorWhite
+```
+
+### Additional colors
+
+```example:color
+@color: #0074A0           @name: --colorLink
+@color: #F9F9F9           @name: --colorBG
+@color: rgba(0,0,0,.13)   @name: --shadowColor
+@color: rgba(0,0,0,.07)   @name: --shadowColorSubtle
+```
+*/
+
+/* Dependencies */
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css');
+
 :root {
   --fontPrimary: 'Catamaran', sans-serif;
 
