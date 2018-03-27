@@ -125,12 +125,12 @@ export default class FAQ extends Component {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row" style={{position: 'relative', top: 25}}>
             <div className="col text-center text-lg-right">
               <i class="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
             </div>
           </div>
-          
+
         </div>
 
       </div>
