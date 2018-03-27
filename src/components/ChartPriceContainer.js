@@ -6,6 +6,20 @@ import ChartPrice from './ChartPrice'
 export default class ChartPriceContainer extends Component {
   constructor() {
     super();
+
+    const distribution24Moths = [
+      0, 18, 117, 351, 767, 1407,
+      2309, 3511, 5047, 6952, 9257, 11995,
+      15196, 18889, 23104, 27870, 33215, 39166,
+      45749, 52992, 60921, 69561, 78938, 89076
+    ];
+    const initialBuyPrice = 20;
+    var prices24months = [];
+    distribution24Moths.map(function(dist){
+      prices24months.push(
+        (initialBuyPrice*(100000-dist))/10000000000
+      );
+    });
     this.state = {
       labels: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                 19 ,20, 21, 22, 23, 24 ],
@@ -14,10 +28,7 @@ export default class ChartPriceContainer extends Component {
         fillColor: "transparent",
         strokeColor: "#FACE5D",
         pointColor: "#FACE5D",
-        data: [ 0.02068, 0.01842, 0.01632, 0.01438, 0.0126, 0.01096, 0.00946,
-                0.0081, 0.00687, 0.00576, 0.00478, 0.00391, 0.00314, 0.00248,
-                0.00191, 0.00144, 0.00104, 0.00073, 0.00048, 0.00029, 0.00016,
-                0.00007, 0.00002, 0 ],
+        data: prices24months,
         bezierCurveTension : 1,
         offsetGridLines : true
       }

@@ -28,7 +28,7 @@ export default class CardStatGroup extends Component {
 
   _renderBalanceCardStats = value => <CardStat { ...mvmFundsProps } mainValue={value}/>
   _renderBurnedCardStats = value => <CardStat { ...mvmBurnedProps } mainValue={parseInt(value/10**18)}/>
-  _renderStageCardStats = value => <CardStat { ...mvmStageProps } mainValue={`${value}/24`}/>
+  _renderStageCardStats = value => <CardStat { ...mvmStageProps } mainValue={`${value+1}/24`}/>
 
   render() {
     return (
