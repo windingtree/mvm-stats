@@ -1,5 +1,26 @@
 /* Layout: App-content */
 
+/*---
+title: App Content
+section: Layout
+---
+
+The `#app-content` is a wrapper to contain elements or components that will be
+placed on the center area of each view.
+
+Its background color will be a light gradient from `--colorWhite` to `--colorBG`
+except when is used in inside `.app-layout--error` on which its background color
+will be based on `--colorDark`, and also has a padding.<br/>
+
+<p class="medium-sample"/>
+```example:html
+<div id="app-content">
+  <p>content...</p>
+</div>
+```
+
+*/
+
 #app-content {
   padding: 30px 20px 60px 20px;
 

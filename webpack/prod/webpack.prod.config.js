@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default
@@ -15,6 +14,7 @@ console.log('Building App ... \n================\n');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     APP_DIR + '/index.js'
   ],
   module: {
@@ -51,8 +51,6 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    // Clean assets (remove unused files)
-    new WebpackCleanupPlugin({exclude: ["styleguide/**/*"]}),
 
     // Copy files from /src to /public
     new CopyWebpackPlugin([
@@ -69,5 +67,6 @@ module.exports = {
 
     // Extract the CSS to an external minified file
     new ExtractTextPlugin('app.css'),
+
   ]
 }

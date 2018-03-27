@@ -1,13 +1,34 @@
 /* Layout: App-header */
 
+/*---
+title: App Header
+section: Layout
+---
+
+The `#app-header` is a wrapper to contain elements or components that will be
+placed on the top area of each view.
+
+Its background color is based on `--colorDark`, and also has a padding.<br/>
+Note that the elements placed directly inside won't have a bottom margin.
+
+<p class="xsmall-sample"/>
+```example:html
+<div id="app-header">
+  <p>content...</p>
+</div>
+```
+
+
+*/
+
 #app-header {
   padding: 18px 30px;
+  color: var(--colorWhite);
   background: color(var(--colorDark) shade(12%) hue(184%) saturation(100%));
-
-  > * {margin-bottom: 0;}
-
 
   .app-layout--error & {
     padding: 48px 30px 0;
   }
+
+  > * {margin-bottom: 0;}
 }

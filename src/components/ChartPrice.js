@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import SellPriceContainer from './SellPriceContainer';
-
-// Modules
 import { Line as LineChart } from 'react-chartjs';
+import SellPriceContainer from './SellPriceContainer';
+import EtherScanFetcher from '../components/EtherScanFetcher.js'
+import SellPrice from './SellPrice'
+
+const sellPriceCallData = '0x018a25e8'
 
 const ChartPrice = props => {
 
@@ -13,7 +15,9 @@ const ChartPrice = props => {
     <div className="chart-wrapper  animated tdShrinkIn  col-lg-8" >
       {showChartHeader &&
         <div className="chart-wrapper__header">
-          <SellPriceContainer />
+          <EtherScanFetcher callData={sellPriceCallData}
+            render={_renderSellPriceContainer}
+          />
         </div>
       }
       <LineChart data={chartData} options={chartOptions} width="640" height="320"/>
@@ -53,4 +57,7 @@ ChartPrice.defaultProps =  {
   }
 }
 
+const _renderSellPriceContainer = value => {
+  return <SellPrice sellPriceETH={value}/>
+}
 export default ChartPrice;
