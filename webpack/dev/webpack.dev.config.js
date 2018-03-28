@@ -3,6 +3,8 @@ const path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CreateFilePlugin = require('webpack-create-file-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
@@ -39,7 +41,8 @@ module.exports = {
   },
   output: {
     path: path.join(BUILD_DIR, '/'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].js'
   },
   devServer: {
     contentBase: path.join(BUILD_DIR, '/'),
@@ -56,6 +59,11 @@ module.exports = {
         'app.css',
         'bundle.js'
       ]
-    })
+    }),
+    new HtmlWebpackPlugin({
+      filename: BUILD_DIR + '/index.html',
+      template: APP_DIR + '/index.template.html'
+    }),
+    new HtmlWebpackHarddiskPlugin(),
   ]
 }
