@@ -4,8 +4,9 @@ const path = require('path');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
@@ -45,7 +46,9 @@ module.exports = {
   output: {
     path: path.join(BUILD_DIR, '/'),
     publicPath: path.join(BUILD_DIR, '/'),
-    filename: 'bundle.js'
+    filename: '[name].[chunkhash].bundle.js',
+    chunkFilename: '[name].[chunkhash].js',
+    publicPath: ''
   },
   devServer: {
     contentBase: path.join(BUILD_DIR, '/'),
@@ -57,7 +60,6 @@ module.exports = {
 
     // Copy files from /src to /public
     new CopyWebpackPlugin([
-      { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' },
       { from: APP_DIR + '/font/', to: BUILD_DIR + '/font/' },
       { from: APP_DIR + '/img/', to: BUILD_DIR + '/img/' }
     ]),
@@ -70,5 +72,9 @@ module.exports = {
 
     // Extract the CSS to an external minified file
     new ExtractTextPlugin('app.css'),
+    new HtmlWebpackPlugin({
+      filename: BUILD_DIR + '/index.html',
+      template: APP_DIR + '/index.template.html'
+    }),
   ]
 }
