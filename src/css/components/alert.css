@@ -18,17 +18,6 @@ Alert messages can have different colors accordingly with the message they are c
 </div>
 ```
 
-```example:html
-<div class="alert-wrapper">
-  <div class="alert alert-success alert-dismissible">
-    <button type="button" class="close">×</button>
-    <strong>
-      <i class="material-icons">info</i>
-    </strong> Message goes here.
-  </div>
-</div>
-```
-
 Use the following syntax to call an alert message from a view: `_showAlert(type, message)`
 
 ```js
