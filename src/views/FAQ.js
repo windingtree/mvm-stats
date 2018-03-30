@@ -76,7 +76,7 @@ export default class FAQ extends Component {
 
           <div className="row">
             <div className="col text-center text-lg-right">
-              <i class="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+              <i className="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export default class FAQ extends Component {
                 questions.map((question, index) =>
                   <React.Fragment key={question[0]}>
                     <h3>
-                      <small><i className="wicon-arrow-right text-danger  animated tdFadeInRight"></i></small>&nbsp;
+                      <i className="fas fa-arrow-right mr-1 fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
                       <strong className="animated tdFadeIn">{question[0]}</strong>
                     </h3>
                     <p className="text--lg  animated tdFadeIn">{question[1]}</p>
@@ -101,12 +101,11 @@ export default class FAQ extends Component {
                 )
               }
               <h3>
-                <small>
-                  <i className="wicon-arrow-right text-danger  animated tdFadeInRight"></i></small>&nbsp;
+                <i className="fas fa-arrow-right mr-1 fa-xs text-danger  animated tdFadeInRight"></i>&nbsp;
                 <strong className="animated tdFadeIn">Generate Transactions Data</strong>
               </h3>
 
-              <form className="col-12 col-sm-6 col-lg-4  px-0 mt-1">
+              <form className="col-4  px-0 mt-1">
                 <div className="form-group mb-4">
                   <label htmlFor="sellAmountInput"><strong className="text--lg">Tokens to sell</strong></label>
                   <input type="number" className="form-control" id="sellAmountInput" min="0" step="0.01" onChange={(event) => {self.generateData(event.target.value)}}/>
@@ -149,7 +148,7 @@ export default class FAQ extends Component {
 
           <div className="row" style={{position: 'relative', top: 25}}>
             <div className="col text-center text-lg-right">
-              <i class="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+              <i className="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
             </div>
           </div>
 

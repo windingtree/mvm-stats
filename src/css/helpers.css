@@ -48,7 +48,6 @@ need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/bor
 .link-white { color: var(--colorWhite) !important }
 
 .text--breakword {word-wrap: break-word !important; }
-.text--xs { font-size: 11px !important; }
 .text--sm { font-size: 14px !important; }
 .text--md { font-size: 16px !important; }
 .text--lg { font-size: 18px !important; }
