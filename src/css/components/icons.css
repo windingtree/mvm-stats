@@ -32,9 +32,8 @@ Font Awesome Icons
 */
 
 
-[class*="wicon-"] {
+.icon, .material-icons, .fas {
   color: #007587;
-  font-size: 105%;
 }
 
 .material-icons--xl {

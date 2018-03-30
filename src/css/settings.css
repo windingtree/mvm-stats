@@ -60,10 +60,10 @@ The colors used on the app are defined as variables in `settings.css`.
 */
 
 /* Dependencies */
-  /* @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800'); */
-  @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
-  @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-  @import url('https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css');
 
 :root {
   /* --fontPrimary: 'Raleway', sans-serif; */
