@@ -3,7 +3,6 @@
   <head>
     <title> Lif Market Validation Mechanism - WindingTree </title>
     <meta charset="UTF-8">
-
     <meta name="description" content="Making travel cheaper for consumers and more profitable for suppliers.">
     <meta property="og:title" content="Lif Market Validation Mechanism"/>
     <meta property="og:description" content="Making travel cheaper for consumers and more profitable for suppliers."/>
@@ -13,13 +12,17 @@
     <meta name="git-rev" content="<%= GIT_REV %>">
     <meta name="ver" content="<%= VERSION_NUMBER %>">
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css" />
 
+    <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="//windingtree.com/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#008A94"/>
+
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="//windingtree.com/images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="//windingtree.com/images/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="//windingtree.com/images/icons/apple-icon-72x72.png">
@@ -35,9 +38,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="//windingtree.com/images/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="//windingtree.com/images/icons/favicon.png">
 
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="//windingtree.com/images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="font/wt-icons.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css" />
 
   </head>
   <body>
@@ -46,5 +52,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" defer></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
   </body>
 </html>
