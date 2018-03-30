@@ -1,27 +1,43 @@
 /* CARD */
 
-/*
-@styleguide
-@title Card
+/*---
+title:   Cards
+section: Components
+---
 
-The card component is inherited from bootstrap, but we created custom styles for it.
+The card component is inherited from bootstrap, but we created custom styles for it.<br/>
 Documentation: https://getbootstrap.com/docs/4.0/components/card/
 
 We added a sub-component called `.card-icon` which is the small icon placed in the top right corner of the cards.
 On the home page we used an inline style to center the cards and prevent them to be wider than 300px.
 
-    <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
-      <div className="card-body text-center">
-        <Link
-          onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
-          to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
-          <i className="material-icons link-light">help_outline</i>
-        </Link>
-        <i className="material-icons material-icons--xl">account_balance_wallet</i>
-        <h1 className="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
-        <p className="card-text text--xl text-success"><strong>16,278</strong></p>
-      </div>
+<p class="large-sample hide-codeblock">
+```example
+  <div class="card ml-lg-4 mr-lg-4 mb-0" style="max-width: 300px; margin: 0 auto">
+    <div class="card-body text-center">
+      <a href="#" class="card-icon">
+        <i class="material-icons link-light">help_outline</i>
+      </a>
+      <i class="material-icons material-icons--xl">account_balance_wallet</i>
+      <h1 class="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
+      <p class="card-text text--xl text-success"><strong>16,278</strong></p>
     </div>
+  </div>
+```
+```html
+  <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
+    <div className="card-body text-center">
+      <Link
+        onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
+        to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
+        <i className="material-icons link-light">help_outline</i>
+      </Link>
+      <i className="material-icons material-icons--xl">account_balance_wallet</i>
+      <h1 className="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
+      <p className="card-text text--xl text-success"><strong>16,278</strong></p>
+    </div>
+  </div>
+```
 
 */
 
