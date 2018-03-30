@@ -1,6 +1,59 @@
 /* Layout */
 
-@import "layout/app-wrapper";
+/*---
+title:   App Structure
+section: Layout
+---
+
+The basic app layout consists in a wrapper, header, content, and footer.
+
+```html
+<div id="app">
+  <div id="app">
+    <div id="app-header"><div>
+    <div id="app-content">
+      <div id="app-hero"><div>
+    <div>
+    <div id="app-footer"><div>
+  <div>
+<div>
+  ```
+
+### There are two layouts at the moment.
+
+The layout files are stored in the `src/layouts` folder. The layout name is
+indicated with a modifier class name in the `#app-layout` container.
+
+#### LayoutMain
+
+This layout is used as the default.
+
+```html
+<div id="app">
+  <div id="app-layout" class="app-layout--main">
+    <div id="app-header"><div>
+    <div id="app-content"><div>
+    <div id="app-footer"><div>
+  <div>
+<div>
+  ```
+
+#### LayoutError
+
+This layout is used as the error page only.
+
+```html
+<div id="app">
+  <div id="app-layout" class="app-layout--error">
+    <div id="app-header"><div>
+    <div id="app-content"><div>
+  <div>
+<div>
+  ```
+
+*/
+
+@import "layout/app-layout";
 @import "layout/app-grid";
 @import "layout/app-header";
 @import "layout/app-content";

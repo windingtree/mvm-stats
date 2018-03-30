@@ -33,7 +33,7 @@ export default class MainLayout extends Component {
         <Alert ref={this._callAlert} />
 
         <AppHeader id="app-header" />
-        {this.props.children}
+        {childrenWithProps}
         <AppFooter/>
 
       </div>
