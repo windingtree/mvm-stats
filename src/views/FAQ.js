@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import Web3 from 'web3';
 
 const web3 = new Web3();
@@ -72,6 +73,13 @@ export default class FAQ extends Component {
         </div>
 
         <div className="container">
+
+          <div className="row">
+            <div className="col text-center text-lg-right">
+              <i class="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+            </div>
+          </div>
+
           <div className="row">
             <div className="col text-center">
               <h1 className="mb-5"><strong>Frequently Asked Questions</strong></h1>
@@ -116,6 +124,13 @@ export default class FAQ extends Component {
               <p className="text--lg  animated tdFadeIn">Data: <small>{self.state.sellTokensData}</small></p>
             </div>
           </div>
+
+          <div className="row" style={{position: 'relative', top: 25}}>
+            <div className="col text-center text-lg-right">
+              <i class="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+            </div>
+          </div>
+
         </div>
 
       </div>
