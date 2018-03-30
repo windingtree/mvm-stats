@@ -48,7 +48,11 @@ On the home page we used an inline style to center the cards and prevent them to
 
   /* the card icon is the small icon placed in the top right corner of the cards */
   .card-icon {
+<<<<<<< HEAD
     font-size: 23px;
+=======
+    font-size: 20px;
+>>>>>>> 43d8d4f... Styleguide (#41)
     position: absolute;
     top: 15px;
     right: 15px;
