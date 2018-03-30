@@ -1,13 +1,21 @@
 /* BUTTONS */
 
-/*
-@styleguide
-@title Buttons
+/*---
+title:   Buttons
+section: Components
+---
 
-We are using Bootstrap style buttons.
+We are using Bootstrap style buttons.<br/>
 Check the documentation below.
-
 - https://getbootstrap.com/docs/4.0/components/buttons/
+
+Below are the button styles we used until now.
+
+```example:html
+<a class="btn btn-primary btn-sm" href="#">Small Button</a>
+<a class="btn btn-info btn-xl" href="#">Extra Large Button</a>
+```
+
 */
 
 
