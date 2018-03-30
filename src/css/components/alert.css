@@ -7,6 +7,7 @@ section: Components
 
 Alert messages can have different colors accordingly with the message they are comunicating.
 
+<p class="xsmall-sample">
 ```example:html
 <div class="alert-wrapper">
   <div class="alert alert-success alert-dismissible">
@@ -18,16 +19,26 @@ Alert messages can have different colors accordingly with the message they are c
 </div>
 ```
 
-Use the following syntax to call an alert message from a view: `_showAlert(type, message)`
+Use the following syntax to call an alert message from a view: `showAlert(type, message)`
 
 ```js
-_showAlert('success', 'This is a success message')
+    const {showAlert} = this.props;
+
+    <button onClick={()=>showAlert('[info|success|warning|danger]','Alert message')}>
+      Show Alert
+    </button>
+  )
 ```
 
-In a Layout template (ie. MainLayout.js) use `_alert.open(type, message)`
+In a Layout template (ie. LayoutMain.js) include the `<Alert/>` component and use `_alert.open(type, message)`
 
 ```js
-this._alert.open('success', 'This is a success message')
+    import Alert from '../components/Alert';
+
+    <button onClick={()=>this._alert.open('[info|success|warning|danger]','Alert message')}>
+      Show Alert
+    </button>
+  )
 ```
 
 */
