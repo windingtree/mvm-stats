@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const {version} = require('../../package');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CreateFilePlugin = require('webpack-create-file-plugin');
@@ -9,6 +10,8 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
 const BUILD_DIR = path.resolve(parentDir, 'public');
+const GIT_REV = process.env.GIT_REV || 'unknown';
+const VERSION_NUMBER = version || '0.0.0';
 
 console.log('Starting App ... \n================\n');
 
@@ -65,5 +68,9 @@ module.exports = {
       template: APP_DIR + '/index.template.html'
     }),
     new HtmlWebpackHarddiskPlugin(),
+    new webpack.DefinePlugin({
+      'GIT_REV': JSON.stringify(GIT_REV),
+      'VERSION_NUMBER': JSON.stringify(VERSION_NUMBER),
+    }),
   ]
 }
