@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const {version} = require('../../package');
 
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -11,7 +12,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
 const BUILD_DIR = path.resolve(parentDir, 'public');
-
+const GIT_REV = process.env.GIT_REV || 'unknown';
+const VERSION_NUMBER = version || '0.0.0';
 console.log('Building App ... \n================\n');
 
 module.exports = {
@@ -74,6 +76,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: BUILD_DIR + '/index.html',
       template: APP_DIR + '/index.template.html'
+    }),
+    new webpack.DefinePlugin({
+      'GIT_REV': JSON.stringify(GIT_REV),
+      'VERSION_NUMBER': JSON.stringify(VERSION_NUMBER),
     }),
   ]
 }
