@@ -10,6 +10,7 @@
     "build": "npm run clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js",
     "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public",
     "clean": "rm -rf public && mkdir public",
+    "now-start": "serve --single ./public",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "author": "Nico Calabrese",
