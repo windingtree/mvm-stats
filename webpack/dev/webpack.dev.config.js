@@ -53,9 +53,9 @@ module.exports = {
   },
   plugins: [
     // Copy files from /src to /public
-    new CopyWebpackPlugin([
-      { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' }
-    ]),
+    // new CopyWebpackPlugin([
+    //   { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' }
+    // ]),
     // Create blank files to avoid errors in the browser console
     new CreateFilePlugin({
       files: [
