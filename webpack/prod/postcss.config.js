@@ -19,7 +19,7 @@ module.exports = ({
         }
       }),
       destination: 'public/styleguide/',
-      index: 'index.template.html',
+      index: 'index.html',
       // files that will be copied to styleguide folder
       assets: ['src/css/styleguide/style.css'],
     },
