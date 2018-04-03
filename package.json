@@ -11,7 +11,8 @@
     "deploy": "now -e GIT_REV=`git rev-parse --short HEAD` -e NODE_ENV=production --token $NOW_TOKEN --npm --public",
     "clean": "rm -rf public && mkdir public",
     "now-start": "serve --single ./public",
-    "alias": "now alias --token=$NOW_TOKEN"
+    "alias": "now alias --token=$NOW_TOKEN",
+    "postalias": "./scripts/cloudflare-cachepurge.sh"
   },
   "author": "Nico Calabrese",
   "license": "ISC",
