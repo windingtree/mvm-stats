@@ -1,0 +1,15 @@
+{
+  "short_name": "Lif MVM",
+  "name": "Lif Market Validation Mechanism",
+  "icons": [
+    {
+      "src":"/img/content/logo-app.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fff",
+  "theme_color": "#008A94",
+  "display": "standalone"
+}
