@@ -27,20 +27,11 @@ body {
   background: var(--colorBG);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 80772f0... Design adjustments in FAQ. Created new CSS helpers. Change thed default color for titles.
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
   color: var(--colorSecondary);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 43d8d4f... Styleguide (#41)
-=======
->>>>>>> 80772f0... Design adjustments in FAQ. Created new CSS helpers. Change thed default color for titles.
 h3, .h3 {
   > strong,
   > b {
