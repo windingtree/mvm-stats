@@ -14,7 +14,7 @@ jobs:
     - npm run alias
 env:
   global:
-  - CF_ROOT=https://demo.windingtree.com
+  - CF_ROOT=https://mvm.windingtree.com
   # NOW TOKEN
   - secure: T0y2j5vGQIGoLWa/6uLngEsFGff14fe4xQezkltLp5KG1oJCgcQ8klpDvGGR+MphtDgH0NvC6ALHLqEwhnxfuhII+9AFhJic8B65Ww19Z7Hl4ZCggDG+CchwApJmI2SyJXgOXIOVz0kj1mR3wNkgu+bmPxQmGOIP3QlB+IuiZqxrWwNUjjMZzg5lFSRQxlR2JTxANDRMi25PgXfwNHgmzghGhHGKrKMRtp6+A6K+gUmmZvQt5I5xOnmQfpbwEIj805nsJHit3iTZ9yRJ3lzg1b/CkhfvFkS3JS7rDpuFSl6f5r8lI4zpQmTA2V9NyqREgZ+Qu1y5yA11NB3/mPsh4M2FB5+lH64jrYKHBYEaQH59lmfyAxNNXAR7QJldXNzBu/ljBXy/kb+W8wPBCTynXV8kGmMPykLNs+4+cim6avg1Fjb6E9KPAHo6nCFi4OvzrOHjs9UsoMVsH/0dXDi8QCSsPjGwuvgRPP3Oz5QA+r4H1Xm7FqUeAR6bH8dVzeZFT5UbiMBwkjM6fgN+DAVqPzPv8au4qkWrzs7oWLH/uSGwqsXOy6nRvT/CqkzdXdtz2qzEQ2cG1lola7eBMMBjmdKjdtBK295tIgWovFqUF6LtOo7/Ytq0jthTU1sunuIJoBuWcSWBM0ayIL6oIxzCb0APcsw+Ad/+TCzmjUymEJU=
   # CF_ZONE
