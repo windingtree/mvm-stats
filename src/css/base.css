@@ -1,5 +1,27 @@
 /* Base */
 
+/*---
+title:   Base styles
+section: Base
+---
+
+The styles for standard html elements are inherithed fromm Bootstrap, at the
+moment we made only minimal modifications. Please refer to Bootstrap's docs if
+need guidance on how to use them. http://getbootstrap.com/docs/4.0/content/reboot/
+
+We have included the heading styles down below only for a visual refference.
+
+```example:html
+<h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
+```
+
+*/
+
 body {
   font-family: var(--fontPrimary);
   background: var(--colorBG);
