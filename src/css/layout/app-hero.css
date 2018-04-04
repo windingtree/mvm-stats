@@ -121,7 +121,21 @@ come next to make them overlap with the hero's background.
     canvas {
       max-width: 100%;
       height: auto !important;
+      margin-bottom: -10px;
     }
+
+    @media all and (max-width: 480px) {
+      margin-right: -15px;
+      margin-left: -15px;
+      width: auto;
+
+      canvas {
+        margin-top: 0;
+        margin-bottom: -20px;
+      }
+    }
+
+
   }
 
 }
