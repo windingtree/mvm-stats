@@ -58,7 +58,7 @@ module.exports = {
     // Copy files from /src to /public
     new CopyWebpackPlugin([
       { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' },
-      // { from: APP_DIR + '/fonts/', to: BUILD_DIR + '/fonts/' }
+      // { from: APP_DIR + '/fonts/', to: BUILD_DIR + '/fonts/' },
       { from: APP_DIR + '/img/', to: BUILD_DIR + '/img/' }
     ]),
 
