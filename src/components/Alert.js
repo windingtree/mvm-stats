@@ -48,7 +48,7 @@ class Alert extends Component {
           <div className={`alert alert-${alertType} alert-dismissible ${hide ? 'animate-fadeOut' : 'animate-bounceInDown'}`}>
             <button type="button" className="close" data-dismiss="alert" onClick={this.fadeOut}>×</button>
             <strong>
-              <i className="material-icons">info</i>
+              <i className="wicon-info"></i>
             </strong> {alertMessage}
           </div>
         </div>

@@ -52,7 +52,8 @@ need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/bor
 .text--sm { font-size: 14px !important; }
 .text--md { font-size: 16px !important; }
 .text--lg { font-size: 18px !important; }
-.text--xl {
+.text--xl { font-size: 45px !important; }
+.text--xxl {
   font-size: 60px !important;
   line-height: 75px !important;
   strong {font-weight: 900 !important;}
