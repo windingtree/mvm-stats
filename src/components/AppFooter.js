@@ -19,7 +19,7 @@ export default class AppFooter extends Component {
             <section className="col-12 col-md-6">
               <h4><strong>About Winding Tree</strong></h4>
               <p>Winding Tree is a blockchain-based decentralized <a href="https://github.com/windingtree/">open-source</a> travel distribution platform. We make travel cheaper for the end user, while making it more profitable for suppliers.</p>
-              <p><a href="https://windingtree.com" className="btn btn-primary btn-sm mb-3">Learn More</a></p>
+              <p><a href="https://windingtree.com" className="btn btn-primary btn-sm mb-3">Visit our website</a></p>
             </section>
             <section className="col-12 col-md-6">
                <h4><strong>Winding Tree Limited</strong></h4>
