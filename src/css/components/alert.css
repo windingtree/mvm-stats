@@ -13,7 +13,7 @@ Alert messages can have different colors accordingly with the message they are c
   <div class="alert alert-success alert-dismissible">
     <button type="button" class="close">×</button>
     <strong>
-      <i class="material-icons">info</i>
+      <i class="wicon-info"></i>
     </strong> Message goes here.
   </div>
 </div>
@@ -63,17 +63,17 @@ In a Layout template (ie. LayoutMain.js) include the `<Alert/>` component and us
   }
 
  .close {
-   top: 7px;
+   top: 8px;
    font-size: 21px;
    font-weight: bold;
   }
 
- .material-icons {
-    position: absolute;
-    top: 23px;
-    left: 22px;
-    font-size: 18px;
-    opacity: 0.7;
+ [class*=wicon-] {
+   position: absolute;
+   top: 22px;
+   left: 22px;
+   font-size: 19px;
+   opacity: .7;
   }
 
   &.alert-danger {

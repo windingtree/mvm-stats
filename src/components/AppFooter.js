@@ -25,9 +25,9 @@ export default class AppFooter extends Component {
                <h4><strong>Winding Tree Limited</strong></h4>
               <p>Suite 23 Portland House, Glacis Road<br/>Gibraltar GX11 1AA</p>
               <ul className="list-unstyled">
-                <li><i className="fab fa-github text-primary"></i> <a href="https://github.com/windingtree/">GitHub</a></li>
-                <li><i className="fab fa-twitter text-primary"></i> <a href="https://twitter.com/windingtree">Twitter</a></li>
-                <li><i className="fas fa-link text-primary"></i> <a href="http://demo.windingtree.com/">Demo App</a></li>
+                <li><i className="wicon-github-circled text-primary"></i> <a href="https://github.com/windingtree/">GitHub</a></li>
+                <li><i className="wicon-twitter text-primary"></i> <a href="https://twitter.com/windingtree">Twitter</a></li>
+                <li><i className="wicon-link text-primary"></i> <a href="http://demo.windingtree.com/">Demo App</a></li>
               </ul>
             </section>
           </div>
