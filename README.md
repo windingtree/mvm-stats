@@ -7,7 +7,7 @@
 * Clone the repo.
 * Run `npm install` to get the required dependencies.
 * Run `npm run build` to "compile" the app, put the necesary files (minified and optimized) in the public folder, and create a style-guide in public/styleguide.
-* Use `npm start` to run the webapp in http://localhost:5050/.
+* Use `npm start` to run the webapp in http://localhost:5000/.
 
 ### Dev Server ###
 
