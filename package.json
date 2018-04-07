@@ -1,17 +1,18 @@
 {
   "name": "app",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --hot --host 0.0.0.0 --disable-host-check",
-    "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --host 0.0.0.0 --disable-host-check",
-    "build": "npm run clean && webpack --config ./webpack/prod/webpack.prod.config.js",
-    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public",
+    "start": "npm run build && serve --single ./public",
+    "dev": "webpack-dev-server --config ./webpack/dev/webpack.dev.config.js --content-base --public --hot --host 0.0.0.0 --disable-host-check",
+    "build": "npm run clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js",
+    "deploy": "now -e GIT_REV=`git rev-parse --short HEAD` -e NODE_ENV=production --token $NOW_TOKEN --npm --public",
     "clean": "rm -rf public && mkdir public",
+    "now-start": "serve --single ./public",
     "alias": "now alias --token=$NOW_TOKEN",
-    "now-start": "serve --single ./public"
+    "postalias": "./scripts/cloudflare-cachepurge.sh"
   },
   "author": "Nico Calabrese",
   "license": "ISC",
@@ -40,6 +41,8 @@
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-harddisk-plugin": "^0.2.0",
+    "html-webpack-plugin": "^3.1.0",
     "mdcss": "^1.5.2",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
