@@ -18,7 +18,7 @@ export default class NotFound extends Component {
 
   render () {
     return (
-      <div id="app-content">
+      <div id="app-content" role="main">
         <div className="container">
           <div className="row">
             <div className="col text-center">
