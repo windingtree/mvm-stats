@@ -24,7 +24,7 @@ export default class Home extends Component {
     const {showAlert} = this.props;
 
     return (
-      <div id="app-content">
+      <div id="app-content" role="main">
 
         <div id="app-hero" className="app-hero--pull-bottom">
           <div className="container">

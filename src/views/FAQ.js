@@ -59,7 +59,7 @@ export default class FAQ extends Component {
     const faqLenght = questions.length;
     var self = this;
     return (
-      <div id="app-content">
+      <div id="app-content" role="main">
 
         <div id="app-hero" className="app-hero--compact">
           <div className="container">
