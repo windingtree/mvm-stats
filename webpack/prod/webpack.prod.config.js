@@ -84,5 +84,6 @@ module.exports = {
       'GIT_REV': JSON.stringify(GIT_REV),
       'VERSION_NUMBER': JSON.stringify(VERSION_NUMBER),
     }),
+
   ]
 }
