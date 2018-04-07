@@ -61,7 +61,7 @@ export default class FAQ extends Component {
     return (
       <div id="app-content" role="main">
 
-        <div id="app-hero" className="app-hero--compact">
+        <div id="app-hero">
           <div className="container">
             <div className="row">
               <div className="col-12">

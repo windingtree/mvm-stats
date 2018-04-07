@@ -32,9 +32,6 @@ export default class Home extends Component {
               <div className="col-12">
                 <h3 className="h6"><strong>WINDINGTREE.COM</strong></h3>
                 <h2><strong>Lif Market Validation Mechanism</strong></h2>
-                <svg height="4" width="80">
-                  <line x1="0" y1="0" x2="80" y2="0" style={{stroke: '#fff', strokeWidth:4}} />
-                </svg>
                 <ChartPriceContainer />
               </div>
             </div>
@@ -50,7 +47,7 @@ export default class Home extends Component {
           <div className="row">
             <div className="col text-center">
               <p className="h1 mr-2 mb-3"><strong>Have questions?</strong></p>
-              <Link to="FAQ" className="btn btn-info btn-xl mb-4">Check the <strong>FAQ</strong></Link>
+              <Link to="FAQ" className="btn btn-accent btn-xl mb-4">Check the <strong>FAQ</strong></Link>
             </div>
           </div>
 

@@ -5,17 +5,17 @@ import EtherScanFetcher from '../components/EtherScanFetcher.js'
 const mvmFundsProps = {
   mainTitile: 'MVM Funds (ETH)',
   icon:'account_balance_wallet',
-  textColor: 'text-success',
+  textColor: 'text-primary',
 };
 const mvmStageProps = {
   mainTitile: 'MVM Stage',
   icon: 'timelapse',
-  textColor: 'text-dark',
+  textColor: 'text-danger',
 };
 const mvmBurnedProps = {
   mainTitile: 'Tokens Burned',
   icon:'whatshot',
-  textColor: 'text-danger',
+  textColor: 'text-info',
 };
 const mvmBurnedCallData = '0x555f323a';
 const mvmStageCallData = '0xb4f5a21a';

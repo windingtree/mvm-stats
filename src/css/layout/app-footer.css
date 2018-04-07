@@ -8,7 +8,7 @@ section: Layout
 The `#app-footer` is a wrapper to contain elements or components that will be
 placed on the bottom area of each view (when based on the main layout).
 
-Its background color is based on `--colorBG`, and also has a padding and a top
+Its background color is based on `--colorLight`, and also has a padding and a top
 border.<br/>
 
 ```example:html
@@ -19,7 +19,15 @@ border.<br/>
 */
 
 #app-footer {
+  overflow: hidden;
+  position: relative;
   padding: 40px 30px;
-  border-top: 1px solid var(--colorLight);
-  background: var(--colorBG);
+  background: var(--colorLight);
+
+  .row > * {z-index: 10;}
+  .pulse-box {
+    position: absolute;
+    left: 0; bottom: -200px; right: 0;
+    z-index: 1;
+  }
 }

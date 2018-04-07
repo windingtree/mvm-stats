@@ -43,8 +43,8 @@ On the home page we used an inline style to center the cards and prevent them to
 
 .card {
   border:none;
-  box-shadow: var(--shadowSubtle);
-  border-radius: 2px;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
 
   /* the card icon is the small icon placed in the top right corner of the cards */
   .card-icon {

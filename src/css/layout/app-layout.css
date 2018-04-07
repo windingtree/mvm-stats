@@ -3,5 +3,9 @@
 .app-layout--error {
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
-  &, * {background: color(var(--colorDark) shade(12%) hue(184%) saturation(100%));}
+  background: var(--colorWhite);
+
+  #app-header,
+  #app-content {background: none;}
+
 }

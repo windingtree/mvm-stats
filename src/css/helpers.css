@@ -10,6 +10,9 @@ moment we made only minimal modifications. Please refer to Bootstrap's docs if
 need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/borders/
 
 */
+.font--alt {
+  font-family: var(--fontSecondary)!important;
+}
 
 .text-primary { color: var(--colorPrimary) !important }
 .text-accent { color: var(--colorAccent) !important }

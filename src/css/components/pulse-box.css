@@ -1,0 +1,95 @@
+/* PULSE BOX */
+
+/*---
+title:   Pulse Box
+section: Components
+---
+
+A circular animated pulse to give some live to the pages.
+
+<p class="xsmall-sample">
+```example:html
+<div class="pulse-container">
+  <div class="pulse-box">
+    <svg class="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="circle first-circle" cx="25" cy="25" r="25"></circle>
+      <circle class="circle second-circle" cx="25" cy="25" r="25"></circle>
+      <circle class="circle third-circle" cx="25" cy="25" r="25"></circle>
+      <circle class="circle" fill="none" cx="25" cy="25" r="25"></circle>
+    </svg>
+  </div>
+</div>
+```
+
+*/
+
+.pulse-box {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* pulse in SVG */
+svg.pulse-svg {
+  overflow: visible;
+}
+svg.pulse-svg .first-circle, svg.pulse-svg .second-circle, svg.pulse-svg .third-circle {
+  fill: var(--colorMuted);
+  transform: scale(0.5);
+  transform-origin: center center;
+  animation: pulse-me 3s linear infinite;
+}
+svg.pulse-svg .second-circle {
+  animation-delay: 1s;
+}
+svg.pulse-svg .third-circle {
+  animation-delay: 2s;
+}
+/* pulse in CSS */
+.pulse-css {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: var(--colorMuted);
+  position: relative;
+}
+.pulse-css:before, .pulse-css:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background-color: var(--colorMuted);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: scale(0.5);
+  transform-origin: center center;
+  animation: pulse-me 3s linear infinite;
+}
+.pulse-css:after {
+  animation-delay: 2s;
+}
+@keyframes pulse-me {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.02;
+  }
+  100% {
+    transform: scale(15);
+    opacity: 0;
+  }
+}

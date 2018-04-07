@@ -27,13 +27,10 @@ as well as the `.chart-wrapper` CSS component.
 </div>
 ```
 
-### Modifiers
-
-There are two CSS modifier classes that can be applyed to '#app-hero'
-
-#### Pull bottom
-`.app-hero--pull-bottom` is used on the homepage, it pulls the contents that
-come next to make them overlap with the hero's background.
+### Pull bottom
+`.app-hero--pull-bottom` is a CSS modifier class used on the homepage,
+it pulls the contents that come next to make them overlap with the hero's
+background.
 
 <p class="large-sample hide-codeblock"/>
 ```example
@@ -55,26 +52,10 @@ come next to make them overlap with the hero's background.
 </div>
 ```
 
-#### Hero compact
-`.app-hero--compact` just reduces the padding of the hero.
-
-<p class="medium-sample hide-codeblock"/>
-```example
-<div id="app-hero" class="mb-0 app-hero--compact">
-  <h1>Hero Area</h1>
-  <p class="mb-0">Sample text</p>
-</div>
-```
-```html
-<div id="app-hero" class="app-hero--compact">
-  <h1>Hero Area</h1>
-  <p>Sample text</p>
-</div>
-```
 */
 
 #app-hero {
-  padding: 40px 20px 40px 20px;
+  padding: 45px 20px;
   margin-bottom: 45px;
   #app-content & {
     margin-top: -30px;
@@ -83,27 +64,17 @@ come next to make them overlap with the hero's background.
   }
 
   &.app-hero--pull-bottom {
-    padding-bottom: 80px;
-    margin-bottom: -40px;
-  }
-
-  &.app-hero--compact {
-    padding: 25px 20px;
+    padding-bottom: 70px;
+    margin-bottom: -45px;
   }
 
   text-align: center;
   color: var(--colorWhite);
-  background: var(--colorAccent);
-
-  h1 {
-    color: var(--colorWhite);
-    margin-bottom: 0;
-  }
+  background: var(--brandGradient);
 
   h2 {
-    margin-bottom: 15px;
-    color: var(--colorWhite);
-    font-size: 60px;
+    margin-bottom: 45px;
+    font-size: 55px;
     font-weight: 400;
     line-height: 1;
   }

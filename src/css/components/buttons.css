@@ -34,6 +34,7 @@ Below are the button styles we used until now.
   border-color: var(--colorPrimary);
   background-color: var(--colorPrimary);
   &:hover {
+    border-color: var(--colorPrimary);
     background-color: color(var(--colorPrimary) shade(15%));
   }
   &:not(:disabled):not(.disabled):active {background-color: color(var(--colorPrimary) shade: 25%);}
@@ -44,6 +45,8 @@ Below are the button styles we used until now.
   border-color: var(--colorAccent);
   background-color: var(--colorAccent);
   &:hover {
+    color: var(--colorWhite);
+    border-color: var(--colorAccent);
     background-color: color(var(--colorAccent) shade(15%));
   }
   &:not(:disabled):not(.disabled):active {background-color: color(var(--colorAccent) shade(25%));}
@@ -53,6 +56,7 @@ Below are the button styles we used until now.
   border-color: var(--colorSecondary);
   background-color: var(--colorSecondary);
   &:hover {
+    border-color: var(--colorSecondary);
     background-color: color(var(--colorSecondary) shade(15%));
   }
   &:not(:disabled):not(.disabled):active {background-color: color(var(--colorSecondary) shade(25%));}

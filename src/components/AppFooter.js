@@ -33,10 +33,23 @@ export default class AppFooter extends Component {
           </div>
           <div className="row">
             <div className="col-12">
-              <p className="mb-0">© Winding Tree</p>
+              <p className="mb-0 font--alt">© Winding Tree</p>
             </div>
           </div>
         </div>
+
+
+        <div className="pulse-container">
+          <div className="pulse-box">
+            <svg className="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle className="circle first-circle" cx="25" cy="25" r="25"></circle>
+              <circle className="circle second-circle" cx="25" cy="25" r="25"></circle>
+              <circle className="circle third-circle" cx="25" cy="25" r="25"></circle>
+              <circle className="circle" fill="none" cx="25" cy="25" r="25"></circle>
+            </svg>
+          </div>
+        </div>
+
       </footer>
     );
   }

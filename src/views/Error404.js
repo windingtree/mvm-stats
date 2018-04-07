@@ -22,8 +22,8 @@ export default class NotFound extends Component {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <h1 className="mb-3">Page not found</h1>
-              <i class="fas fa-caret-square-left"></i> <Link to="/" className="link-light">Back to home</Link>
+              <h1 className="mb-3"><b>Page not found</b></h1>
+              <i class="fas fa-caret-square-left text-accent"></i> <Link to="/" className="link-muted">Back to home</Link>
             </div>
           </div>
         </div>

@@ -53,7 +53,6 @@ The colors used on the app are defined as variables in `settings.css`.
 
 ```example:color
 @color: #0074A0           @name: --colorLink
-@color: #F9F9F9           @name: --colorBG
 @color: rgba(0,0,0,.13)   @name: --shadowColor
 @color: rgba(0,0,0,.07)   @name: --shadowColorSubtle
 ```
@@ -76,20 +75,20 @@ The colors used on the app are defined as variables in `settings.css`.
   --colorSuccess: #55c46e;
   --colorDanger: #F54D6F;
   --colorWarning: #FACE5D;
-  --colorInfo: #0aa8ca;
-  --colorLight: #CBCCCC;
-  --colorDark: #0d989d;
+  --colorInfo: var(--altTeal);
+  --colorLight: #DEDEDE;
+  --colorDark: var(--brandBlack);
   --colorMuted: #878f97;
   --colorWhite: #fff;
 
-  --colorLink: #0074A0;
-  --colorBG: #F9F9F9;
+  --colorLink: var(--altBlue--Dark);
+  --colorBG: #E5E5E5;
 
   /* specific colors */
-  --shadowColor: rgba(0,0,0,.13);
-  --shadowColorSubtle: rgba(0,0,0,.07);
+  --shadowColor: rgba(0,0,0,.2);
+  --shadowColor--subtle: rgba(0,0,0,.07);
 
   /* shadows */
-  --shadow: 10px 10px 90px var(--shadowColor), 1px 5px 30px var(--shadowColorSubtle);
-  --shadowSubtle: 5px 5px 20px var(--shadowColorSubtle);
+  --shadow: 2px 2px 20px var(--shadowColor--subtle);
+  --shadow--xl: 5px 5px 40px var(--shadowColor), 1px 5px 20px var(--shadowColor--subtle);
 }
