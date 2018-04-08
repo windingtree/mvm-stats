@@ -2,8 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const {version} = require('../../package');
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CreateFilePlugin = require('webpack-create-file-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
@@ -52,17 +50,6 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    // Copy files from /src to /public
-    // new CopyWebpackPlugin([
-    //   { from: APP_DIR + '/index.html', to: BUILD_DIR + '/index.html' }
-    // ]),
-    // Create blank files to avoid errors in the browser console
-    new CreateFilePlugin({
-      files: [
-        'app.css',
-        'bundle.js'
-      ]
-    }),
     new HtmlWebpackPlugin({
       filename: BUILD_DIR + '/index.html',
       template: APP_DIR + '/index.template.html'

@@ -15,13 +15,13 @@ module.exports = ({
         logo: '',
         base: 'public/styleguide',
         examples: {
-          css: ['../app.css'],
+          css: ['../app.css','font/wt-icons.css'],
         }
       }),
       destination: 'public/styleguide/',
       index: 'index.html',
       // files that will be copied to styleguide folder
-      assets: ['src/css/styleguide/style.css'],
+      assets: ['src/css/styleguide/style.css','src/font/'],
     },
     'cssnano': {}
   },

@@ -16,8 +16,8 @@ export default class AppHeader extends Component {
     return (
       <header id={this.props.id}>
         <h1>
-          <Link to="/" className="brand-wrapper brand-wrapper--alpha">
-            <img className="brand" src={lifLogo}/>
+          <Link to="/" hrefLang="en" className="brand-wrapper brand-wrapper--alpha">
+            <img className="brand" src={lifLogo} alt="WindingTree Lif"/>
           </Link>
         </h1>
       </header>

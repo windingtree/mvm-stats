@@ -6,20 +6,19 @@
 
 * Clone the repo.
 * Run `npm install` to get the required dependencies.
-* Create an empty folder /public or run `npm run build`.
-* Run `npm start` to run the webapp in development mode or `npm run dev` if don't want the hot reload enabled.
-* Run `npm run build` to "compile" the app. Put the necesary files in the public folder (minified and optimized), and create a style guide in /styleguide.
+* Run `npm run build` to "compile" the app, put the necesary files (minified and optimized) in the public folder, and create a style-guide in public/styleguide.
+* Use `npm start` to run the webapp in http://localhost:5000/.
 
 ### Dev Server ###
 
-After runing `npm start` or `npm run dev`
+Use `npm run dev` to run the app in development mode, with hot reload enabled.
 
 * Web/App: http://localhost:8080/
 * Style-guide: http://localhost:8080/styleguide
 
 #### Deploy to Github Pages
 
-`npm run deploy`
+Run `npm run deploy`
 
 #### Dependencies ####
 
