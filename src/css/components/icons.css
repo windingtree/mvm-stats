@@ -1,10 +1,11 @@
 /* ICONS */
 
-/*
-@styleguide
-@title Icons
+/*---
+title:   Icons
+section: Components
+---
 
-We are using font awesome and material icons (MI will be removed later).
+We are using font awesome and material icons (* MI will be removed later).
 Check the documentation below.
 
 - https://fontawesome.com/icons/l
@@ -14,21 +15,26 @@ Check the documentation below.
 
 Material Icons
 
+<p class="xsmall-sample hide-codeblock">
+```example
 <i class="material-icons">whatshot</i>
-
-    <i class="material-icons">whatshot</i>
+```
+```html
+<i className="material-icons">whatshot</i>
+```
 
 Font Awesome Icons
 
-<i class="fas fa-fire"></i>
-
-    <i class="fas fa-fire"></i>
+```html
+<i className="fas fa-fire"></i>
+```
 
 */
 
 
-.icon, .material-icons, .fas {
+[class*="wicon-"] {
   color: #007587;
+  font-size: 105%;
 }
 
 .material-icons--xl {

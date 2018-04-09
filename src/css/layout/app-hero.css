@@ -1,12 +1,90 @@
 /* Layout: App-hero */
 
+/*---
+title: App Hero
+section: Layout
+---
+
+The `#app-hero` is a wrapper to contain elements or components that will have
+prominence on the page, directly after the header.
+
+Its background color is based on `--colorAccent`, and also has a padding.
+
+Note that the heading tags placed inside have different styles than the default,
+as well as the `.chart-wrapper` CSS component.
+
+<p class="large-sample hide-codeblock"/>
+```example
+<div id="app-hero" class="mb-0">
+  <h1>Hero Area</h1>
+  <p class="mb-0">Sample text</p>
+</div>
+```
+```html
+<div id="app-hero">
+  <h1>Hero Area</h1>
+  <p>Sample text</p>
+</div>
+```
+
+### Modifiers
+
+There are two CSS modifier classes that can be applyed to '#app-hero'
+
+#### Pull bottom
+`.app-hero--pull-bottom` is used on the homepage, it pulls the contents that
+come next to make them overlap with the hero's background.
+
+<p class="large-sample hide-codeblock"/>
+```example
+<div id="app-hero" class="app-hero--pull-bottom">
+  <h1>Hero Area</h1>
+  <p class="mb-0">Sample text</p>
+</div>
+<div>
+  <p>Content that comes next.</p>
+</div>
+```
+```html
+<div id="app-hero" class="app-hero--pull-bottom">
+  <h1>Hero Area</h1>
+  <p>Sample text</p>
+</div>
+<div>
+  <p>Content that comes next.</p>
+</div>
+```
+
+#### Hero compact
+`.app-hero--compact` just reduces the padding of the hero.
+
+<p class="medium-sample hide-codeblock"/>
+```example
+<div id="app-hero" class="mb-0 app-hero--compact">
+  <h1>Hero Area</h1>
+  <p class="mb-0">Sample text</p>
+</div>
+```
+```html
+<div id="app-hero" class="app-hero--compact">
+  <h1>Hero Area</h1>
+  <p>Sample text</p>
+</div>
+```
+*/
+
 #app-hero {
   padding: 40px 20px 40px 20px;
-  margin: -30px -20px 45px -20px;
+  margin-bottom: 45px;
+  #app-content & {
+    margin-top: -30px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
   &.app-hero--pull-bottom {
-    padding: 40px 20px 80px 20px;
-    margin: -30px -20px -40px -20px;
+    padding-bottom: 80px;
+    margin-bottom: -40px;
   }
 
   &.app-hero--compact {
@@ -15,7 +93,7 @@
 
   text-align: center;
   color: var(--colorWhite);
-  background: #48ddca;
+  background: var(--colorAccent);
 
   h1 {
     color: var(--colorWhite);
@@ -43,7 +121,21 @@
     canvas {
       max-width: 100%;
       height: auto !important;
+      margin-bottom: -10px;
     }
+
+    @media all and (max-width: 480px) {
+      margin-right: -15px;
+      margin-left: -15px;
+      width: auto;
+
+      canvas {
+        margin-top: 0;
+        margin-bottom: -20px;
+      }
+    }
+
+
   }
 
 }

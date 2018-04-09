@@ -1,5 +1,16 @@
 /* Helpers */
 
+/*---
+title:   Helpers
+section: Utility Classes
+---
+
+Helper/Utility classes are elements are inherithed fromm Bootstrap, at the
+moment we made only minimal modifications. Please refer to Bootstrap's docs if
+need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/borders/
+
+*/
+
 .text-primary { color: var(--colorPrimary) !important }
 .text-accent { color: var(--colorAccent) !important }
 .text-secondary { color: var(--colorSecondary) !important }
@@ -36,8 +47,13 @@
 .link-muted { color: var(--colorMuted) !important }
 .link-white { color: var(--colorWhite) !important }
 
+.text--breakword {word-wrap: break-word !important; }
+.text--xs { font-size: 11px !important; }
+.text--sm { font-size: 14px !important; }
+.text--md { font-size: 16px !important; }
 .text--lg { font-size: 18px !important; }
-.text--xl {
+.text--xl { font-size: 45px !important; }
+.text--xxl {
   font-size: 60px !important;
   line-height: 75px !important;
   strong {font-weight: 900 !important;}
