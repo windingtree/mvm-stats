@@ -11,7 +11,7 @@ const ChartPrice = props => {
   const { chartData, chartOptions, showChartHeader } = props;
 
   return (
-    <div className="chart-wrapper  animated tdShrinkIn  col-lg-8" >
+    <div className="chart-wrapper col-lg-8" >
       {showChartHeader &&
         <div className="chart-wrapper__header">
           <EtherScanFetcher callData={sellPriceCallData}

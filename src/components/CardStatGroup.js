@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CardStat from '../components/CardStat.js'
 import EtherScanFetcher from '../components/EtherScanFetcher.js'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const mvmFundsProps = {
   mainTitile: 'MVM Funds (ETH)',
@@ -34,25 +35,31 @@ export default class CardStatGroup extends Component {
     return (
       <React.Fragment>
         <div className="col-12 col-md-4">
-          <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-          <EtherScanFetcher callData={'balance'}
-            render={this._renderBalanceCardStats}
-          />
-          </div>
-        </div>
-        <div className="col-12 col-md-4">
-          <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-          <EtherScanFetcher callData={mvmStageCallData}
-            render={this._renderStageCardStats}
-          />
-          </div>
-        </div>
-        <div className="col-12 col-md-4">
-          <div className="card ml-lg-4 mr-lg-4 mb-5  animated tdFadeInUp" style={{maxWidth: 300, margin: '0 auto'}}>
-            <EtherScanFetcher callData={mvmBurnedCallData}
-              render={this._renderBurnedCardStats}
+          <ScrollAnimation animateIn="tdFadeInRight" animateOnce="true">
+            <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
+            <EtherScanFetcher callData={'balance'}
+              render={this._renderBalanceCardStats}
             />
-          </div>
+            </div>
+          </ScrollAnimation>
+        </div>
+        <div className="col-12 col-md-4">
+          <ScrollAnimation animateIn="tdFadeInUp" animateOnce="true">
+            <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
+            <EtherScanFetcher callData={mvmStageCallData}
+              render={this._renderStageCardStats}
+            />
+            </div>
+          </ScrollAnimation>
+        </div>
+        <div className="col-12 col-md-4">
+          <ScrollAnimation animateIn="tdFadeInLeft" animateOnce="true">
+            <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
+              <EtherScanFetcher callData={mvmBurnedCallData}
+                render={this._renderBurnedCardStats}
+              />
+            </div>
+          </ScrollAnimation>
         </div>
       </React.Fragment>
     );

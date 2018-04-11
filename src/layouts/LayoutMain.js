@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 // Components
 import AppHeader from '../components/AppHeader';
@@ -34,8 +35,10 @@ export default class MainLayout extends Component {
 
         <AppHeader id="app-header" />
         {childrenWithProps}
-        <AppFooter/>
 
+        <ScrollAnimation animateIn="tdFadeInUp" animateOut="tdFadeOutDown" offset="40">
+          <AppFooter/>
+        </ScrollAnimation>
       </div>
     );
   }

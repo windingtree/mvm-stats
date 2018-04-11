@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import ChartPriceContainer from '../components/ChartPriceContainer.js'
 import CardStatGroup from '../components/CardStatGroup.js'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class Home extends Component {
 
@@ -30,9 +31,13 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h3 className="h6"><strong>WINDINGTREE.COM</strong></h3>
-                <h2><strong>Lif Market Validation Mechanism</strong></h2>
-                <ChartPriceContainer />
+                <ScrollAnimation animateIn="tdFadeInUp" offset="0" >
+                  <h3 className="h6"><strong>WINDINGTREE.COM</strong></h3>
+                  <h2><strong>Lif Market Validation Mechanism</strong></h2>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="tdShrinkIn" offset="0" animateOnce="true">
+                  <ChartPriceContainer />
+                </ScrollAnimation>
               </div>
             </div>
           </div>

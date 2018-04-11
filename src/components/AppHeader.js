@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class AppHeader extends Component {
 
@@ -15,11 +16,13 @@ export default class AppHeader extends Component {
 
     return (
       <header id={this.props.id}>
-        <h1>
-          <Link to="/" hrefLang="en" className="brand-wrapper">
-            <img className="brand" src={lifLogo} alt="WindingTree Lif"/>
-          </Link>
-        </h1>
+        <ScrollAnimation animateIn="tdFadeInDown" offset="0" duration="2.5">
+          <h1>
+            <Link to="/" className="brand-wrapper brand-wrapper--alpha">
+              <img className="brand" src={lifLogo}/>
+            </Link>
+          </h1>
+        </ScrollAnimation>
       </header>
     );
   }
