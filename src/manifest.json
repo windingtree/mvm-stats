@@ -3,8 +3,23 @@
   "name": "Lif Market Validation Mechanism",
   "icons": [
     {
-      "src":"/img/content/logo-app.png",
+      "src": "/img/app-icons/192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/app-icons/256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/app-icons/384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/app-icons/512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
