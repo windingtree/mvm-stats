@@ -8,6 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlMinifier = require('html-minifier').minify
+
 
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
@@ -78,7 +80,17 @@ module.exports = {
     new ExtractTextPlugin('app.css'),
     new HtmlWebpackPlugin({
       filename: BUILD_DIR + '/index.html',
-      template: APP_DIR + '/index.template.html'
+      template: APP_DIR + '/index.template.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        html5: true,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeAttributeQuotes: true
+      }
     }),
     new webpack.DefinePlugin({
       'GIT_REV': JSON.stringify(GIT_REV),
