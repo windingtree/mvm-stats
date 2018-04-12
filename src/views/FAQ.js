@@ -75,8 +75,8 @@ export default class FAQ extends Component {
         <div className="container">
 
           <div className="row">
-            <div className="col mb-2 mb-lg-0 text-center text-lg-right">
-              <i className="wicon-back text--sm text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+            <div className="col mb-4 mb-lg-0 text-center text-lg-right">
+              <i className="wicon-back text--sm text-accent"></i> <Link className="link-muted" to="/" hrefLang="en">Back to home</Link>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ export default class FAQ extends Component {
 
           <div className="row" style={{position: 'relative', top: 25}}>
             <div className="col text-center text-lg-right">
-              <i className="wicon-back text--sm text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+              <i className="wicon-back text--sm text-accent"></i> <Link className="link-muted" to="/" hrefLang="en">Back to home</Link>
             </div>
           </div>
 
