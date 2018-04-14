@@ -8,9 +8,9 @@ const sellPriceCallData = '0x018a25e8'
 
 const ChartPrice = props => {
 
-  const { chartData, chartOptions, showChartHeader } = props;
+const { chartData, chartOptions, showChartHeader } = props;
 
-  return (
+return (
     <div className="chart-wrapper col-lg-8" >
       {showChartHeader &&
         <div className="chart-wrapper__header">

@@ -35,7 +35,7 @@ export default class CardStatGroup extends Component {
     return (
       <React.Fragment>
         <div className="col-12 col-md-4">
-          <ScrollAnimation animateIn="tdFadeInRight" animateOnce="true">
+          <ScrollAnimation animateIn="tdFadeInRight" animateOnce={true}>
             <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
             <EtherScanFetcher callData={'balance'}
               render={this._renderBalanceCardStats}
@@ -44,7 +44,7 @@ export default class CardStatGroup extends Component {
           </ScrollAnimation>
         </div>
         <div className="col-12 col-md-4">
-          <ScrollAnimation animateIn="tdFadeInUp" animateOnce="true">
+          <ScrollAnimation animateIn="tdFadeInUp" animateOnce={true}>
             <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
             <EtherScanFetcher callData={mvmStageCallData}
               render={this._renderStageCardStats}
@@ -53,7 +53,7 @@ export default class CardStatGroup extends Component {
           </ScrollAnimation>
         </div>
         <div className="col-12 col-md-4">
-          <ScrollAnimation animateIn="tdFadeInLeft" animateOnce="true">
+          <ScrollAnimation animateIn="tdFadeInLeft" animateOnce={true}>
             <div className="card ml-lg-4 mr-lg-4 mb-5" style={{maxWidth: 300, margin: '0 auto'}}>
               <EtherScanFetcher callData={mvmBurnedCallData}
                 render={this._renderBurnedCardStats}

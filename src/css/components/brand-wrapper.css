@@ -62,6 +62,7 @@ When this componen is used inside the App-hero some additional styles will be ap
     top: 12px;
     left: 11px;
     width: 28px;
+    font-size: 14px;
   }
 
   &:hover {

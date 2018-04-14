@@ -45,7 +45,7 @@ class Alert extends Component {
 
       return (
         <div className="alert-wrapper">
-          <div className={`alert alert-${alertType} alert-dismissible ${hide ? 'animate-fadeOut' : 'animate-bounceInDown'}`}>
+          <div className={`alert alert-${alertType} alert-dismissible animated ${hide ? 'tdFadeOut' : 'tdFadeInLeft'}`}>
             <button type="button" className="close" data-dismiss="alert" onClick={this.fadeOut}>×</button>
             <strong>
               <i className="wicon-info"></i>

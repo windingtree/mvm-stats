@@ -16,6 +16,9 @@ Use `npm run dev` to run the app in development mode, with hot reload enabled.
 * Web/App: http://localhost:8080/
 * Style-guide: http://localhost:8080/styleguide
 
+#### Deploy to Github Pages
+
+Run `npm run deploy`
 
 #### Dependencies ####
 

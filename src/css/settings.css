@@ -4,26 +4,55 @@
 title:   Fonts
 section: Overview
 ---
+### Prymary font family
+The primary font we are using is called "Raleway".<br/>
+Link to Google fonts: https://fonts.google.com/specimen/Raleway
 
-### Primary font family
-The font we are using is called "Catamaran".<br/>
-Link to Google fonts: https://fonts.google.com/specimen/Catamaran
-
-The font is imported from Google Fonts, and defined in the `--fontPrimary` variable in `src/css/settings.css`.
 
 <p class="hide-codeblock">
 ```example
-<h1>Catamaran Font</h1>
+<h1>Raleway Font</h1>
 <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
 volutpat.</p>
 ```
-```css
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
 
+### Secondary font family
+We are also using a complementary font family, "Catamaran".<br/>
+Link to Google fonts: https://fonts.google.com/specimen/Catamaran
+
+<p class="hide-codeblock">
+```example
+<h1 class="font--alt">Catamaran Font</h1>
+<p class="class="font--alt lead mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+volutpat.</p>
+```
+
+#### Font imports
+The fonts are imported from Google Fonts, and defined in the `--fontPrimary`
+and `--fontSecondary` variables in `src/css/settings.css`.
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
 :root {
-  --fontPrimary: 'Catamaran', sans-serif;
+  --fontPrimary: 'Raleway', sans-serif;
+  --fontSecondary: 'Catamaran', sans-serif;
 }
+```
+
+### Using the fonts
+All elements and components will use the primaryfornts by default, to use the
+secondary fornt use the class `font--alt` as shown below.
+<p class="hide-codeblock xsmall-sample"/>
+```example:html
+  <p>A paragraph which uses the default font</p>
+  <p class="font--alt mb-0">A paragraph which uses the alternative font</p>
+```
+```html
+  <p>A paragraph which uses the default font</p>
+  <p className="font--alt">A paragraph which uses the alternative font</p>
 ```
 
 */
@@ -32,63 +61,121 @@ volutpat.</p>
 title:   Colors
 section: Overview
 ---
+The colors used on the app are defined as variables in `settings.css` and
+are based in the brand's color palette.
 
-The colors used on the app are defined as variables in `settings.css`.
-
+### Brand Colors
 ```example:color
-@color: #129697   @name: --colorPrimary
-@color: #48ddca   @name: --colorAccent
-@color: #5F6A6F   @name: --colorSecondary
-@color: #55c46e   @name: --colorSuccess
-@color: #F54D6F   @name: --colorDanger
-@color: #FACE5D   @name: --colorWarning
-@color: #0aa8ca   @name: --colorInfo
-@color: #CBCCCC   @name: --colorLight
-@color: #0d989d   @name: --colorDark
-@color: #878f97   @name: --colorMuted
-@color: #fff      @name: --colorWhite
+@color: #00DF9E   @name: --brandGreen
+@color: #1AC592   @name: --brandGreen--Subtle
+@color: #0B8FDF   @name: --brandBlue
+@color: #191919   @name: --brandBlack
 ```
 
-### Additional colors
+### Brand Gradient
+<div
+  class="swatch"
+  style="
+    margin-bottom: -10px;
+    max-width: 100%; width: 100%; height: 8em; padding: .25em;
+    background: linear-gradient(135deg,  #00DF9E 0%, #0B8FDF 100%);
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 0px 1px;
+    border-radius: .25rem;"
+  >
+  linear-gradient(135deg,  #00DF9E 0%, #0B8FDF 100%)<br/>
+  --brandGradient
+</div>
 
+<p class="xsmall-sample hide-codeblock"/>
+```example:css
+   @gradient: linear-gradient(135deg,  #00DF9E 0%, #0B8FDF 100%)    @name:  --brandGradient
+```
+
+### Brand complementary colors
 ```example:color
-@color: #0074A0           @name: --colorLink
-@color: rgba(0,0,0,.13)   @name: --shadowColor
-@color: rgba(0,0,0,.07)   @name: --shadowColorSubtle
+@color: #02FFB3   @name: --altGreen
+@color: #0AD7DF   @name: --altTeal
+@color: #0948E0   @name: --altBlue
+@color: #0948E0   @name: --altBlue--Dark
+@color: #9F09E0   @name: --altPurple
+@color: #5709DF   @name: --altPurple--Dark
+@color: #DF097E   @name: --altMagenta
+```
+
+### App colors
+```example:color
+@color: #00DF9E   @name: --colorPrimary
+@color: #02FFB3   @name: --colorSecondary
+@color: #0B8FDF   @name: --colorAccent
+@color: #1AC592   @name: --colorSuccess
+@color: #DF097E   @name: --colorDanger
+@color: #EFB547   @name: --colorWarning
+@color: #0AD7DF   @name: --colorInfo
+@color: #DEDEDE   @name: --colorLight
+@color: #191919   @name: --colorDark
+@color: #878F97   @name: --colorMuted
+@color: #FFF      @name: --colorWhite
+```
+
+### Additional app colors
+```example:color
+@color: #0948E0   @name: --colorLink
+@color: rgba(0,0,0,.2)   @name: --shadowColor
+@color: rgba(0,0,0,.07)  @name: --shadowColor--subtle
 ```
 */
 
-/* Dependencies */
-  /* @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800'); */
-  @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
-  @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-  @import url('https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+@import url("https://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css");
 
 :root {
-  /* --fontPrimary: 'Raleway', sans-serif; */
-  --fontPrimary: 'Catamaran', sans-serif;
+  --fontPrimary: "Raleway", sans-serif;
+  --fontSecondary: "Catamaran", sans-serif;
 
-  /* colors */
-  --colorPrimary: #129697;
-  --colorAccent: #48ddca;
-  --colorSecondary: #5F6A6F;
-  --colorSuccess: #55c46e;
-  --colorDanger: #F54D6F;
-  --colorWarning: #FACE5D;
+  /* brand colors */
+  --brandGreen: #00df9e;
+  --brandGreen--Subtle: #1ac592;
+  --brandBlue: #0b8fdf;
+  --brandBlack: #191919;
+  --brandGradient: linear-gradient(
+    135deg,
+    var(--brandGreen) 0%,
+    var(--brandBlue) 100%
+  );
+
+  --altGreen: #02ffb3;
+  --altTeal: #0ad7df;
+  --altBlue: #0948e0;
+  --altBlue--Dark: #0948e0;
+  --altPurple: #9f09e0;
+  --altPurple--Dark: #5709df;
+  --altMagenta: #df097e;
+
+  /* app colors */
+  --colorPrimary: var(--brandGreen);
+  --colorAccent: var(--brandBlue);
+  --colorSecondary: var(--altGreen);
+  --colorSuccess: var(--brandGreen--Subtle);
+  --colorDanger: var(--altMagenta);
+  --colorWarning: #efb547;
   --colorInfo: var(--altTeal);
-  --colorLight: #DEDEDE;
+  --colorLight: #dedede;
   --colorDark: var(--brandBlack);
   --colorMuted: #878f97;
   --colorWhite: #fff;
 
   --colorLink: var(--altBlue--Dark);
-  --colorBG: #E5E5E5;
+  --colorBG: #e5e5e5;
 
   /* specific colors */
-  --shadowColor: rgba(0,0,0,.2);
-  --shadowColor--subtle: rgba(0,0,0,.07);
+  --shadowColor: rgba(0, 0, 0, 0.2);
+  --shadowColor--subtle: rgba(0, 0, 0, 0.07);
 
   /* shadows */
   --shadow: 2px 2px 20px var(--shadowColor--subtle);
-  --shadow--xl: 5px 5px 40px var(--shadowColor), 1px 5px 20px var(--shadowColor--subtle);
+  --shadow--xl: 5px 5px 40px var(--shadowColor),
+    1px 5px 20px var(--shadowColor--subtle);
 }

@@ -6,12 +6,12 @@ import AppHeader from '../components/AppHeader';
 import AppFooter from '../components/AppFooter';
 import Alert from '../components/Alert';
 
-export default class MainLayout extends Component {
+export default class LayoutMain extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name: 'MainLayout'
+      name: 'LayoutMain'
     };
   }
 
@@ -36,7 +36,7 @@ export default class MainLayout extends Component {
         <AppHeader id="app-header" />
         {childrenWithProps}
 
-        <ScrollAnimation animateIn="tdFadeInUp" animateOut="tdFadeOutDown" offset="40">
+        <ScrollAnimation animateIn="tdFadeInUp" animateOut="tdFadeOutDown" offset={40}>
           <AppFooter/>
         </ScrollAnimation>
       </div>

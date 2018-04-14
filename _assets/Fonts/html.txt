@@ -1,0 +1,22 @@
+Embed Font
+
+https://fonts.google.com/specimen/Raleway?selection.family=Raleway:200,300,400,600,800
+
+To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document.
+
+STANDARD
+	
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,800" rel="stylesheet">
+
+@IMPORT
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,800');
+    </style>
+
+
+Specify in CSS
+
+Use the following CSS rules to specify these families:
+
+    font-family: 'Raleway', sans-serif;

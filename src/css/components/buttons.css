@@ -34,7 +34,7 @@ Below are the button styles we used until now.
   border-color: var(--colorPrimary);
   background-color: var(--colorPrimary);
   &:hover {
-    border-color: var(--colorPrimary);
+    border-color: color(var(--colorPrimary) shade(15%));
     background-color: color(var(--colorPrimary) shade(15%));
   }
   &:not(:disabled):not(.disabled):active {background-color: color(var(--colorPrimary) shade: 25%);}

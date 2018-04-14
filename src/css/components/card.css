@@ -18,9 +18,9 @@ On the home page we used an inline style to center the cards and prevent them to
       <a href="#" class="card-icon">
         <i class="material-icons link-light">help_outline</i>
       </a>
-      <i class="material-icons material-icons--xl">account_balance_wallet</i>
-      <h1 class="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
-      <p class="card-text text--xl text-success"><strong>16,278</strong></p>
+      <i class="wicon-whatshot text--xl"></i>
+      <h1 class="h5 card-title text-muted"><strong>Main title</strong></h1>
+      <p class="font--alt text--xl text-danger"><strong>16,278</strong></p>
     </div>
   </div>
 ```
@@ -32,9 +32,9 @@ On the home page we used an inline style to center the cards and prevent them to
         to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
         <i className="material-icons link-light">help_outline</i>
       </Link>
-      <i className="material-icons material-icons--xl">account_balance_wallet</i>
-      <h1 className="h5 card-title text-muted"><strong>MVM Funds</strong></h1>
-      <p className="card-text text--xl text-success"><strong>16,278</strong></p>
+      <i className="wicon-whatshot text--xl"></i>
+      <h1 className="h5 card-title text-muted"><strongMain title Funds</strong></h1>
+      <p className="font--alt text--xl text-danger"><strong>{mainValue}</strong></p>
     </div>
   </div>
 ```

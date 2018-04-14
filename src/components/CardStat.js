@@ -11,8 +11,8 @@ const CardStat = props => {
         <i className="wicon-help-outline link-light"></i>
       </Link>
       <i className={`wicon-${icon} text--xl`}></i>
-      <h1 className="h5 card-title text-muted"><strong>{mainTitile}</strong></h1>
-      <p className={`card-text text--xxl ${textColor}`}> <strong>{mainValue}</strong></p>
+      <h1 className="h5 text-muted"><strong>{mainTitile}</strong></h1>
+      <p className={`mb-0 font--alt text--xxl ${textColor}`}> <strong>{mainValue}</strong></p>
     </div>
   )
 }

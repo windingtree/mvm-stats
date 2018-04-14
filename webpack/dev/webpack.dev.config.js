@@ -54,6 +54,8 @@ module.exports = {
       filename: BUILD_DIR + '/index.html',
       template: APP_DIR + '/index.template.html'
     }),
+
+    // Create index.html in /public
     new HtmlWebpackHarddiskPlugin(),
     new webpack.DefinePlugin({
       'GIT_REV': JSON.stringify(GIT_REV),

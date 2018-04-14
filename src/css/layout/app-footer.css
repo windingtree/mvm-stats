@@ -24,10 +24,30 @@ border.<br/>
   padding: 40px 30px;
   background: var(--colorLight);
 
-  .row > * {z-index: 10;}
+  .row > * {
+    z-index: 10;
+  }
   .pulse-box {
     position: absolute;
-    left: 0; bottom: -200px; right: 0;
+    left: 0;
+    bottom: -200px;
+    right: 0;
     z-index: 1;
   }
+}
+
+/*
+  Fix pulse-box issue:
+  Hides the white space that appears when scrolling to bottom
+*/
+#html::after {
+  position: fixed;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-color: var(--colorLight);
 }
