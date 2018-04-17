@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'wt-icons';
-  src: url('wicons/wt-icons.eot?14709528');
-  src: url('wicons/wt-icons.eot?14709528#iefix') format('embedded-opentype'),
-       url('wicons/wt-icons.woff2?14709528') format('woff2'),
-       url('wicons/wt-icons.woff?14709528') format('woff'),
-       url('wicons/wt-icons.ttf?14709528') format('truetype'),
-       url('wicons/wt-icons.svg?14709528#wt-icons') format('svg');
+  src: url('wicons/wt-icons.eot?11751803');
+  src: url('wicons/wt-icons.eot?11751803#iefix') format('embedded-opentype'),
+       url('wicons/wt-icons.woff2?11751803') format('woff2'),
+       url('wicons/wt-icons.woff?11751803') format('woff'),
+       url('wicons/wt-icons.ttf?11751803') format('truetype'),
+       url('wicons/wt-icons.svg?11751803#wt-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'wt-icons';
-    src: url('wicons/wt-icons.svg?14709528#wt-icons') format('svg');
+    src: url('wicons/wt-icons.svg?11751803#wt-icons') format('svg');
   }
 }
 */
@@ -62,6 +62,7 @@
 .wicon-help-outline:before { content: '\e805'; }
 .wicon-info:before { content: '\e806'; }
 .wicon-arrow-right:before { content: '\e807'; }
+.wicon-right-dir:before { content: '\e808'; }
 .wicon-link:before { content: '\f07b'; }
 .wicon-twitter:before { content: '\f099'; }
 .wicon-github-circled:before { content: '\f09b'; }

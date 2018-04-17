@@ -1,6 +1,5 @@
 # MVM STATS #
 
-* [Bootstrap CSS framework](http://getbootstrap.com/) included.
 
 ### Set up ###
 
@@ -15,8 +14,3 @@ Use `npm run dev` to run the app in development mode, with hot reload enabled.
 
 * Web/App: http://localhost:8080/
 * Style-guide: http://localhost:8080/styleguide
-
-
-#### Dependencies ####
-
-http://www.chartjs.org/

@@ -5,46 +5,28 @@ title:   Icons
 section: Components
 ---
 
-We are using font awesome and material icons (* MI will be removed later).
-Check the documentation below.
+We are using a comined set of icons created with fontello.com which includes
+icons from font awesome and material icons.
+Check the references below.
 
+- http://fontello.com/
 - https://fontawesome.com/icons/l
 - https://material.io/icons/
 
 ##### Example of use
 
-Material Icons
-
 <p class="xsmall-sample hide-codeblock">
 ```example
-<i class="material-icons">whatshot</i>
+<i class="wicon-arrow-right"></i>
 ```
 ```html
-<i className="material-icons">whatshot</i>
-```
-
-Font Awesome Icons
-
-```html
-<i className="fas fa-fire"></i>
+<i className="wicon-arrow-right">whatshot</i>
 ```
 
 */
 
 
 [class*="wicon-"] {
-  color: #007587;
+  color: var(--colorDark);
   font-size: 105%;
-}
-
-.material-icons--xl {
-  font-size: 43px;
-}
-
-/* Improves the position of the icons inside the titles */
-.material-icons {
-  h2 &, h3 & {position: relative; top: 2px;}
-}
-.svg-inline--fa {
-  h2 &, h3 & {position: relative; top: -2px;}
 }

@@ -5,12 +5,12 @@ import AppHeader from '../components/AppHeader';
 import AppFooter from '../components/AppFooter';
 import Alert from '../components/Alert';
 
-export default class MainLayout extends Component {
+export default class LayoutError extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name: 'MainLayout'
+      name: 'LayoutError'
     };
   }
 

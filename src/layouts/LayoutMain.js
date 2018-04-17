@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 // Components
 import AppHeader from '../components/AppHeader';
 import AppFooter from '../components/AppFooter';
 import Alert from '../components/Alert';
 
-export default class MainLayout extends Component {
+export default class LayoutMain extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name: 'MainLayout'
+      name: 'LayoutMain'
     };
   }
 
@@ -34,8 +35,10 @@ export default class MainLayout extends Component {
 
         <AppHeader id="app-header" />
         {childrenWithProps}
-        <AppFooter/>
 
+        <ScrollAnimation animateIn="tdFadeInUp" animateOut="tdFadeOutDown" offset={40}>
+          <AppFooter/>
+        </ScrollAnimation>
       </div>
     );
   }

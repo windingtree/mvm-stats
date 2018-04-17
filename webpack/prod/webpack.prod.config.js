@@ -8,6 +8,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlMinifier = require('html-minifier').minify
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
 
 const parentDir = path.join(__dirname, '../../');
 const APP_DIR = path.resolve(parentDir, 'src');
@@ -63,7 +66,6 @@ module.exports = {
     // Copy files from /src to /public
     new CopyWebpackPlugin([
       { from: APP_DIR + '/manifest.json', to: BUILD_DIR + '/manifest.json' },
-      { from: APP_DIR + '/service-worker.js', to: BUILD_DIR + '/service-worker.js' },
       { from: APP_DIR + '/img/', to: BUILD_DIR + '/img/' },
       { from: APP_DIR + '/font/', to: BUILD_DIR + '/font/' },
     ]),
@@ -76,13 +78,29 @@ module.exports = {
 
     // Extract the CSS to an external minified file
     new ExtractTextPlugin('app.css'),
+
+    // Create and minify index.html in /public
     new HtmlWebpackPlugin({
       filename: BUILD_DIR + '/index.html',
-      template: APP_DIR + '/index.template.html'
+      template: APP_DIR + '/index.template.html',
+      minify: {
+        collapseWhitespace: true,
+        html5: true,
+        minifyCSS: true,
+        // minifyJS: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeAttributeQuotes: true
+      }
     }),
     new webpack.DefinePlugin({
       'GIT_REV': JSON.stringify(GIT_REV),
       'VERSION_NUMBER': JSON.stringify(VERSION_NUMBER),
     }),
+
+    // Generate a service worker config file
+    // Ref: https://developers.google.com/web/tools/workbox/guides/get-started
+    new WorkboxPlugin.GenerateSW()
+
   ]
 }

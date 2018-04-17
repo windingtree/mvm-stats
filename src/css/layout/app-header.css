@@ -22,9 +22,9 @@ Note that the elements placed directly inside won't have a bottom margin.
 */
 
 #app-header {
-  padding: 18px 30px;
+  padding: 16px 30px;
   color: var(--colorWhite);
-  background: color(var(--colorDark) shade(12%) hue(184%) saturation(100%));
+  background: var(--brandBlack);
 
   .app-layout--error & {
     padding: 48px 30px 0;

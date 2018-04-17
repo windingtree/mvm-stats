@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import { HashRouter as Router, Route, Switch, Redirect, browserHistory} from 'react-router-dom';
 
+// Styles
+import './css/app.css';
+
 // Layouts
 import LayoutMain from './layouts/LayoutMain.js';
 import LayoutError from './layouts/LayoutError.js';
@@ -11,8 +14,6 @@ import FAQ from './views/FAQ';
 import Error404 from './views/Error404';
 
 export default class App extends Component {
-
-
   render () {
     function RouteWithLayout({layout, component}){
       return (

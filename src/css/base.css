@@ -24,24 +24,32 @@ We have included the heading styles down below only for a visual refference.
 
 body {
   font-family: var(--fontPrimary);
-  background: var(--colorBG);
+}
+
+h1, h2,
+.h1, .h2 {
+  b, strong {font-weight: 800}
+}
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  b, strong {font-weight: 600}
 }
 
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
-  color: var(--colorSecondary);
+  color: var(--colorDark);
 }
 
 h3, .h3 {
   > strong,
   > b {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
 a {
-  color: var(--colorLink);
+  color: var(--altBlue);
   &:hover {
-    color: var(--colorInfo);
+    color: var(--altBlue--Dark);
   }
 }

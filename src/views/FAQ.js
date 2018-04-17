@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Web3 from 'web3';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const web3 = new Web3();
 
@@ -59,103 +60,152 @@ export default class FAQ extends Component {
     const faqLenght = questions.length;
     var self = this;
     return (
-      <div id="app-content" role="main">
-
-        <div id="app-hero" className="app-hero--compact">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <h3 className="h6"><strong>WINDINGTREE.COM</strong></h3>
-                <h2 className="mb-0"><strong>Lif Market Validation Mechanism</strong></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div id="app-content" role="main">
+      <div id="app-hero">
         <div className="container">
-
           <div className="row">
-            <div className="col mb-2 mb-lg-0 text-center text-lg-right">
-              <i className="wicon-back text--sm text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col text-center">
-              <h1 className="mb-5"><strong>Frequently Asked Questions</strong></h1>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              {
-
-                questions.map((question, index) =>
-                  <React.Fragment key={question[0]}>
-                    <h3>
-                      <small><i className="wicon-arrow-right text-danger  animated tdFadeInRight"></i></small>&nbsp;
-                      <strong className="animated tdFadeIn">{question[0]}</strong>
-                    </h3>
-                    <p className="text--lg  animated tdFadeIn">{question[1]}</p>
-                    <hr className="mb-4"/>
-                  </React.Fragment>
-                )
-              }
-              <h3>
-                <small>
-                  <i className="wicon-arrow-right text-danger  animated tdFadeInRight"></i></small>&nbsp;
-                <strong className="animated tdFadeIn">Generate Transactions Data</strong>
+            <div className="col-12">
+              <h3 className="h6">
+                <strong>WINDINGTREE.COM</strong>
               </h3>
-
-              <form className="col-12 col-sm-6 col-lg-4  px-0 mt-1">
-                <div className="form-group mb-4">
-                  <label htmlFor="sellAmountInput"><strong className="text--lg">Tokens to sell</strong></label>
-                  <input type="number" className="form-control" id="sellAmountInput" min="0" step="0.01" onChange={(event) => {self.generateData(event.target.value)}}/>
-                </div>
-              </form>
-
-                <h4>
-                  <strong className="text-secondary animated tdFadeIn">First Transaction</strong>
-                </h4>
-                <ul className="list-unstyled mb-3">
-                  <li className="text--lg animated tdFadeIn">
-                    <b className="mr-2">To:</b> <span className="text-dark">lif.windingtree.eth</span>
-                    <span className="text--sm ml-2 mr-2"><i class="fas fa-caret-right"></i></span>
-                    <em className="text--lg text--breakword text-muted">0xeb9951021698b42e4399f9cbb6267aa35f82d59d</em>
-                  </li>
-                  <li className="text--lg animated tdFadeIn"><b className="mr-2">Gas:</b> <span className="text-muted">100000</span></li>
-                  <li className="text--lg animated tdFadeIn"><b className="mr-2">Data:</b> <span className="text-muted text--breakword">{self.state.approveData}</span></li>
-                </ul>
-                <h4>
-                  <strong className="text-secondary animated tdFadeIn">Second Transaction</strong>
-                </h4>
-                <ul className="list-unstyled">
-                  <li className="text--lg animated tdFadeIn">
-                    <b className="mr-2">To:</b> <span className="text-dark">mvm.windingtree.eth</span>
-                    <span className="text--sm ml-2 mr-2"><i class="fas fa-caret-right"></i></span>
-                    <em className="text--lg text--breakword text-muted">0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A</em>
-                  </li>
-                  <li className="text--lg animated tdFadeIn"><b className="mr-2">Gas:</b> <span className="text-muted">200000</span></li>
-                  <li className="text--lg animated tdFadeIn"><b className="mr-2">Data:</b> <span className="text-muted text--breakword">{self.state.approveData}</span></li>
-                </ul>
-              </div>
-
-          </div>
-
-          <div className="row" style={{position: 'relative', top: 25}}>
-            <div className="col text-center text-lg-right">
-              <i className="wicon-back text--sm text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
+              <h2 className="mb-0">
+                <strong>Lif Market Validation Mechanism</strong>
+              </h2>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="row" style={{position: 'relative', top: 25}}>
-            <div className="col text-center text-lg-right">
-              <i className="fas fa-caret-square-left text-info"></i> <Link className="link-muted" to="/">Back to home</Link>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col mb-4 mb-lg-0 text-center text-lg-right">
+            <i className="wicon-back text--sm text-accent" />{" "}
+            <Link className="link-muted" to="/" hrefLang="en">
+              Back to home
+            </Link>
           </div>
-
         </div>
 
+        <div className="row">
+          <div className="col text-center">
+            <h1 className="mb-5">
+              <strong>Frequently Asked Questions</strong>
+            </h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            {questions.map((question, index) => (
+              <React.Fragment key={question[0]}>
+                <h3>
+                  <ScrollAnimation
+                    animateIn="tdFadeInRight"
+                    animateOnce={true}
+                    delay={index * 350}
+                    duration={3}
+                  >
+                    <small>
+                      <i className="wicon-arrow-right text-danger" />
+                    </small>&nbsp;
+                    <strong>{question[0]}</strong>
+                  </ScrollAnimation>
+                </h3>
+                <ScrollAnimation
+                  animateIn="tdFadeIn"
+                  animateOnce={true}
+                  offset={0}
+                  delay={index * 350}
+                  duration={1}
+                >
+                  <p className="text--lg">{question[1]}</p>
+                </ScrollAnimation>
+                <hr className="mb-4 animated tdFadeIn" />
+              </React.Fragment>
+            ))}
+            <h3>
+              <small>
+                <i className="wicon-arrow-right text-danger" />
+              </small>&nbsp;
+              <strong>Generate Transactions Data</strong>
+            </h3>
+
+            <form className="col-12 col-sm-6 col-lg-4  px-0 mt-1">
+              <div className="form-group mb-4">
+                <label htmlFor="sellAmountInput">
+                  <strong className="text--lg">Tokens to sell</strong>
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="sellAmountInput"
+                  min="0"
+                  step="0.01"
+                  onChange={event => {
+                    self.generateData(event.target.value);
+                  }}
+                />
+              </div>
+            </form>
+
+            <h4>
+              <strong>First Transaction</strong>
+            </h4>
+            <ul className="list-unstyled mb-3">
+              <li className="text--lg">
+                <b className="mr-2">To:</b>{" "}
+                <span className="text-info">lif.windingtree.eth</span>
+                <i className="wicon-right-dir wicon-right-dir text--sm" />
+                <em className="text--lg text--breakword text-muted">
+                  0xeb9951021698b42e4399f9cbb6267aa35f82d59d
+                </em>
+              </li>
+              <li className="text--lg">
+                <b className="mr-2">Gas:</b>{" "}
+                <span className="text-muted">100000</span>
+              </li>
+              <li className="text--lg">
+                <b className="mr-2">Data:</b>{" "}
+                <span className="text-muted text--breakword">
+                  {self.state.approveData}
+                </span>
+              </li>
+            </ul>
+            <h4>
+              <strong>Second Transaction</strong>
+            </h4>
+            <ul className="list-unstyled">
+              <li className="text--lg">
+                <b className="mr-2">To:</b>{" "}
+                <span className="text-info">mvm.windingtree.eth</span>
+                <i className="wicon-right-dir wicon-right-dir text--sm" />
+                <em className="text--lg text--breakword text-muted">
+                  0x27218c41e1054dC0484ACD2aD35DEF0ffd17782A
+                </em>
+              </li>
+              <li className="text--lg">
+                <b className="mr-2">Gas:</b>{" "}
+                <span className="text-muted">200000</span>
+              </li>
+              <li className="text--lg">
+                <b className="mr-2">Data:</b>{" "}
+                <span className="text-muted text--breakword">
+                  {self.state.approveData}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="row" style={{ position: "relative", top: 25 }}>
+          <div className="col text-center text-lg-right">
+            <i className="wicon-back text--sm text-accent" />{" "}
+            <Link className="link-muted" to="/" hrefLang="en">
+              Back to home
+            </Link>
+          </div>
+        </div>
       </div>
+    </div>
     )
   }
 }

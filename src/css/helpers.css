@@ -10,6 +10,9 @@ moment we made only minimal modifications. Please refer to Bootstrap's docs if
 need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/borders/
 
 */
+.font--alt {
+  font-family: var(--fontSecondary)!important;
+}
 
 .text-primary { color: var(--colorPrimary) !important }
 .text-accent { color: var(--colorAccent) !important }
@@ -17,7 +20,7 @@ need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/bor
 .text-success { color: var(--colorSuccess) !important }
 .text-danger { color: var(--colorDanger) !important }
 .text-warning { color: var(--colorWarning) !important }
-.text-info { color: var(--colorInfo) !important }
+.text-info { color: color(var(--colorInfo) shade(15%)) !important }
 .text-light { color: var(--colorLight) !important }
 .text-dark { color: var(--colorDark) !important }
 .text-muted { color: var(--colorMuted) !important }
@@ -41,7 +44,7 @@ need guidance on how to use them. http://getbootstrap.com/docs/4.0/utilities/bor
 .link-success { color: var(--colorSuccess) !important }
 .link-danger { color: var(--colorDanger) !important }
 .link-warning { color: var(--colorWarning) !important }
-.link-info { color: var(--colorInfo) !important }
+.link-info { color: color(var(--colorInfo) shade(15%)) !important }
 .link-light { color: var(--colorLight) !important }
 .link-dark { color: var(--colorDark) !important }
 .link-muted { color: var(--colorMuted) !important }
