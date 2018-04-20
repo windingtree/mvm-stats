@@ -43,8 +43,8 @@ and `--fontSecondary` variables in `src/css/settings.css`.
 ```
 
 ### Using the fonts
-All elements and components will use the primaryfornts by default, to use the
-secondary fornt use the class `font--alt` as shown below.
+All elements and components will use the primary fonts by default, to use the
+secondary font use the class `font--alt` as shown below.
 <p class="hide-codeblock xsmall-sample"/>
 ```example:html
   <p>A paragraph which uses the default font</p>

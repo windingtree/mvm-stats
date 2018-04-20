@@ -6,7 +6,7 @@ section: Layout
 ---
 
 The `#app-footer` is a wrapper to contain elements or components that will be
-placed on the bottom area of each view (when based on the main layout).
+placed on the bottom area of each view (if the views are based in the main layout).
 
 Its background color is based on `--colorLight`, and also has a padding and a top
 border.<br/>

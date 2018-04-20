@@ -36,13 +36,6 @@ When this componen is used inside the App-hero some additional styles will be ap
     <img className="brand" src={lifLogo}/>
   </Link>
 </h1>
-
-<!-- Use the --alpha modifier to make the background translucid-->
-<h1>
-  <Link to="/" className="brand-wrapper brand-wrapper--alpha">
-    <img className="brand" src={lifLogo}/>
-  </Link>
-</h1>
 ```
 
 */

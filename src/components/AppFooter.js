@@ -10,8 +10,6 @@ export default class AppFooter extends Component {
   }
 
   render() {
-    const lifLogo = '../img/content/logo-lif-w.svg';
-
     return (
       <footer id="app-footer">
         <div className="container">

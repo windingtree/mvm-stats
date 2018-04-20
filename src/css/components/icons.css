@@ -5,7 +5,7 @@ title:   Icons
 section: Components
 ---
 
-We are using a comined set of icons created with fontello.com which includes
+We are using a combined set of icons created with fontello.com which includes
 icons from font awesome and material icons.
 Check the references below.
 
@@ -15,18 +15,26 @@ Check the references below.
 
 ##### Example of use
 
-<p class="xsmall-sample hide-codeblock">
-```example
+<p class="large-sample hide-codeblock">
+```example:html
+<i class="wicon-whatshot"></i>
+<i class="wicon-back"></i>
+<i class="wicon-timelapse"></i>
+<i class="wicon-account_balance_wallet"></i>
+<i class="wicon-help-outline"></i>
+<i class="wicon-info"></i>
 <i class="wicon-arrow-right"></i>
+<i class="wicon-right-dir"></i>
+<i class="wicon-link"></i>
+<i class="wicon-twitter"></i>
+<i class="wicon-github-circled"></i>
 ```
-```html
-<i className="wicon-arrow-right">whatshot</i>
-```
+
 
 */
 
 
 [class*="wicon-"] {
-  color: var(--colorDark);
+  color: inherit;
   font-size: 105%;
 }
