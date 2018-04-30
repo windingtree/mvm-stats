@@ -8,6 +8,7 @@ jobs:
   - stage: build and deploy
     if: tag IS present
     script:
+    - sudo apt-get install --no-install-recommends gcc make libpng-dev -y # https://github.com/imagemin/pngquant-bin/issues/78
     - npm i
     - npm i -g now
     - npm run deploy
