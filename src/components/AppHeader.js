@@ -15,7 +15,7 @@ export default class AppHeader extends Component {
     const lifLogo = 'img/content/logo-lif-w.svg';
 
     return (
-      <header id={this.props.id}>
+      <header id={this.props.id} >
         <ScrollAnimation animateIn="tdFadeInDown" offset={0} duration={2.5}>
           <h1 className="mb-0">
             <Link to="/" hrefLang="en" className="brand-wrapper brand-wrapper--alpha">

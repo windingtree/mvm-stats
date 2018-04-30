@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 // Components
 import AppHeader from '../components/AppHeader';
-import AppFooter from '../components/AppFooter';
 import Alert from '../components/Alert';
 
 export default class LayoutError extends Component {

@@ -51,6 +51,7 @@ Alert messages can have different colors accordingly with the message they are c
   </div>
 </div>
 ```
+### Usage
 
 Use the following syntax to call an alert message from a view: `showAlert(type, message)`
 

@@ -13,10 +13,10 @@ On the home page we used an inline style to center the cards and prevent them to
 
 <p class="large-sample hide-codeblock">
 ```example
-  <div class="card ml-lg-4 mr-lg-4 mb-0" style="max-width: 300px; margin: 0 auto">
+  <div class="card mb-0" style="max-width: 300px; margin: 0 auto">
     <div class="card-body text-center">
-      <a href="#" class="card-icon">
-        <i class="material-icons link-light">help_outline</i>
+      <a href="#" class="card-icon link-light">
+        <i class="wicon-help-outline"></i>
       </a>
       <i class="wicon-whatshot text--xl"></i>
       <h1 class="h5 card-title text-muted"><strong>Main title</strong></h1>
@@ -29,8 +29,8 @@ On the home page we used an inline style to center the cards and prevent them to
     <div className="card-body text-center">
       <Link
         onMouseDown={()=>$('[data-toggle="tooltip"]').tooltip('hide') }
-        to="FAQ" className="card-icon" data-toggle="tooltip" data-placement="top" title="More info...">
-        <i className="material-icons link-light">help_outline</i>
+        to="FAQ" className="card-icon link-light" data-toggle="tooltip" data-placement="top" title="More info...">
+        <i class="wicon-help-outline"></i>
       </Link>
       <i className="wicon-whatshot text--xl"></i>
       <h1 className="h5 card-title text-muted"><strongMain title Funds</strong></h1>

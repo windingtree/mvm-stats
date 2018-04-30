@@ -11,6 +11,7 @@ need guidance on how to use them. http://getbootstrap.com/docs/4.0/content/reboo
 
 We have included the heading styles down below only for a visual refference.
 
+<p class="large-sample"/>
 ```example:html
 <h1>h1. Bootstrap heading</h1>
 <h2>h2. Bootstrap heading</h2>
@@ -38,13 +39,6 @@ h3, h4, h5, h6,
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
   color: var(--colorDark);
-}
-
-h3, .h3 {
-  > strong,
-  > b {
-    font-weight: 600;
-  }
 }
 
 a {

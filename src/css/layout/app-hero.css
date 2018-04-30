@@ -8,9 +8,9 @@ section: Layout
 The `#app-hero` is a wrapper to contain elements or components that will have
 prominence on the page, directly after the header.
 
-Its background color is based on `--colorAccent`, and also has a padding.
+Its background color is based on `--brandGradient`, and also has a padding.
 
-Note that the heading tags placed inside have different styles than the default,
+Note that the heading tags placed inside have different styles that overwrite the defaults,
 as well as the `.chart-wrapper` CSS component.
 
 <p class="large-sample hide-codeblock"/>
@@ -28,8 +28,8 @@ as well as the `.chart-wrapper` CSS component.
 ```
 
 ### Pull bottom
-`.app-hero--pull-bottom` is a CSS modifier class used on the homepage,
-it pulls the contents that come next to make them overlap with the hero's
+`.app-hero--pull-bottom` is a CSS modifier class for the hero, is used on the homepage.
+Whe applided on the hero, pulls the contents that come next to make them overlap with the hero's
 background.
 
 <p class="large-sample hide-codeblock"/>
