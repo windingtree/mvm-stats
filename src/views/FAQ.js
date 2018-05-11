@@ -189,7 +189,7 @@ export default class FAQ extends Component {
               <li className="text--lg">
                 <b className="mr-2">Data:</b>{" "}
                 <span className="text-muted text--breakword">
-                  {self.state.approveData}
+                  {self.state.sellTokensData}
                 </span>
               </li>
             </ul>
