@@ -1,15 +1,16 @@
 language: node_js
 node_js:
 - node
-cache: npm
+cache:
+  directories:
+  - "$HOME/.npm"
 install: true
 jobs:
   include:
   - stage: build and deploy
+    install: true
     if: tag IS present
     script:
-    - sudo apt-get install --no-install-recommends gcc make libpng-dev -y # https://github.com/imagemin/pngquant-bin/issues/78
-    - npm ci
     - npm i -g now
     - npm run deploy
     - npm run alias
